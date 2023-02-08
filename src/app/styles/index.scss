@@ -1,8 +1,9 @@
-@import './reset.scss';
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import './variables/global.scss';
-@import './theme/dark.scss';
-@import './theme/light.scss';
+@import "./reset";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import "./variables/global";
+@import "./theme/dark";
+@import "./theme/light";
+
 .app {
   font: var(--font-m);
   background: var(--bg-color);

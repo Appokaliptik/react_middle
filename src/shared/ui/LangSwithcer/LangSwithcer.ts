@@ -1,2 +1,1 @@
-export { LangSwithcer } from "./ui/LangSwithcer";
-
+export { LangSwithcer } from './ui/LangSwithcer';
