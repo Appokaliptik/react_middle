@@ -97,3 +97,42 @@ reviews:
             suggestion: ''
             type: approve
             time: '2023-02-12T12:41:36.202Z'
+  errorButton:
+    locales:
+      ru:
+        comments:
+          - user:
+              name: Appokaliptik
+              email: alexanderstrannik@gmail.com
+            id: U8vRL9SLoMvKB4h-LA1cr
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2023-02-12T19:35:35.169Z'
+            resolved: true
+  smth error:
+    locales:
+      ru:
+        comments:
+          - user:
+              name: Appokaliptik
+              email: alexanderstrannik@gmail.com
+            id: r4x7xogq__FgoLh5Le-Fs
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2023-02-12T19:39:00.979Z'
+            resolved: true
+  refreshButton:
+    locales:
+      ru:
+        comments:
+          - user:
+              name: Appokaliptik
+              email: alexanderstrannik@gmail.com
+            id: vNP6C6SySm463omyjhXae
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2023-02-12T20:11:29.264Z'
+            resolved: true

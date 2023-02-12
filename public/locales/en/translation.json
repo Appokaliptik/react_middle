@@ -3,5 +3,8 @@
   "not found": "Page not found",
   "sidebar swtihcher": "Show",
   "Меню главная": "Main",
-  "Меню о сайте": "About us"
+  "Меню о сайте": "About us",
+  "errorButton": "Throw an error",
+  "smth error": "Something went wrong",
+  "refreshButton": "Refresh"
 }
