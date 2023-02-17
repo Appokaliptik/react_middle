@@ -2,10 +2,17 @@
   color: var(--primary-color);
 }
 
-.primary {
+.primary,
+.primary:visited {
   color: var(--primary-color);
 }
 
-.inverted {
+.secondary,
+.secondary:visited {
   color: var(--inverted-primary-color);
+}
+
+.red,
+.red:visited {
+  color: red;
 }

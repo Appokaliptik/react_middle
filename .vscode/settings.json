@@ -8,6 +8,10 @@
     "source.fixAll.eslint": true, // ESLint auto format on save
     "source.fixAll.stylelint": true
   },
+  "eslint.validate": [
+    "javascript",
+    "typescript"
+  ],
   "stylelint.enable": true,
   "css.validate": true,
   "scss.validate": true,
