@@ -9,7 +9,7 @@ const MainPage = () => {
       {t('Main')}
       <p>{t('glavnaya-tekst-posle-h1')}</p>
       <p>{t('glavnaya2.part1')}</p>
-      <p>{t('glavnaya2.part2')}</p>
+      <p><b>{t('glavnaya2.part2')}</b></p>
       <Loader />
       <ButtonError />
     </div>
