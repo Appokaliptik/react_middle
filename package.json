@@ -12,6 +12,7 @@
     "lint:scss:fix": "stylelint \"**/*.scss\" --fix",
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "test:ui": "npx loki test",
+    "test:ui:url": "npx loki --reactUri file:./storybook-static",
     "test:ui:ok": "npx loki approve",
     "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
@@ -79,13 +80,15 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
-    "i18next": "^22.4.9",
+    "aws-sdk": "^2.1318.0",
+    "i18next": "^22.4.10",
     "i18next-browser-languagedetector": "^7.0.1",
     "i18next-http-backend": "^2.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-i18next": "^12.1.5",
-    "react-router-dom": "^6.2.1"
+    "react-router-dom": "^6.2.1",
+    "storybook-react-i18next": "^1.1.2"
   },
   "repository": {
     "type": "git",

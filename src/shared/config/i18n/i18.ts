@@ -4,6 +4,22 @@ import { initReactI18next } from 'react-i18next';
 import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
+/* eslint-disable global-require */
+/* eslint-disable import/no-dynamic-require */
+
+const ns = ['translation', 'about', 'main'];
+const supportedLngs = ['en', 'ru'];
+const resources = ns.reduce((acc, n) => {
+  supportedLngs.forEach((lng) => {
+    if (!acc[lng]) acc[lng] = {};
+    acc[lng] = {
+      ...acc[lng],
+      [n]: require(`../../../../public/locales/${lng}/${n}.json`),
+    };
+  });
+  return acc;
+}, {});
+
 i18n
   .use(Backend)
   .use(LanguageDetector)
@@ -13,12 +29,12 @@ i18n
     lng: 'ru', // default language
     debug: __IS_DEV,
 
-    interpolation: {
-      escapeValue: false, // not needed for react as it escapes by default
-    },
-    react: {
-      useSuspense: false, //   <---- this will do the magic
-    },
+    defaultNS: 'translation',
+    ns,
+    interpolation: { escapeValue: false },
+    react: { useSuspense: false },
+    supportedLngs,
+    resources,
   });
 
 export default i18n;
