@@ -11,8 +11,11 @@ const ns = ['translation', 'about', 'main'];
 const supportedLngs = ['en', 'ru'];
 const resources = ns.reduce((acc, n) => {
   supportedLngs.forEach((lng) => {
+    // @ts-ignore
     if (!acc[lng]) acc[lng] = {};
+    // @ts-ignore
     acc[lng] = {
+      // @ts-ignore
       ...acc[lng],
       [n]: require(`../../../../public/locales/${lng}/${n}.json`),
     };
