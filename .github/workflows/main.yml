@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [17.x]
 
     steps:
       - uses: actions/checkout@v3
@@ -18,7 +18,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-verstion }}
-      - name: install modules
+      - name: install modules --legacy-peer-deps
         run: npm install
       - name: build production
         run: npm run build:prod
