@@ -5,16 +5,20 @@ import { routerConfig } from '../config/AppConfig';
 
 export function AppRouter() {
   return (
-    <Suspense fallback={<PageLoader />}>
-      <Routes>
-        {Object.values(routerConfig).map(({ path, element }) => (
-          <Route
-            key={path}
-            path={path}
-            element={element}
-          />
-        ))}
-      </Routes>
-    </Suspense>
+    <Routes>
+      {Object.values(routerConfig).map(({ element, path }) => (
+        <Route
+          key={path}
+          path={path}
+          element={(
+            <Suspense fallback={<PageLoader />}>
+              <div className="page-wrapper">
+                {element}
+              </div>
+            </Suspense>
+          )}
+        />
+      ))}
+    </Routes>
   );
 }

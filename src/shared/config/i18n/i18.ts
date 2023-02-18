@@ -9,12 +9,15 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'ru',
+    fallbackLng: 'en',
     lng: 'ru', // default language
     debug: __IS_DEV,
 
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
+    },
+    react: {
+      useSuspense: false, //   <---- this will do the magic
     },
   });
 
