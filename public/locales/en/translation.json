@@ -1,7 +1,7 @@
 {
-  "Язык": "EN",
+  "lang": "English",
+  "shortlang": "En",
   "not found": "Page not found",
-  "sidebar swtihcher": "Show",
   "Меню главная": "Main",
   "Меню о сайте": "About us",
   "errorButton": "Throw an error",

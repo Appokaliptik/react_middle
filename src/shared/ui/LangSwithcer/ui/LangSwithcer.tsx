@@ -1,18 +1,19 @@
 import { useTranslation } from 'react-i18next';
 import i18n from 'shared/config/i18n/i18';
 import { classNames } from 'shared/libs/classNames/classNames';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { Button, ButtonVariant } from 'shared/ui/Button/Button';
 import cls from './LangSwithcer.module.scss';
 
 interface LangSwithcerProps {
   className?: string
+  short?: boolean
 }
 export enum Lang {
   RU = 'ru',
   EN = 'en'
 }
 
-export const LangSwithcer = ({ className }: LangSwithcerProps) => {
+export const LangSwithcer = ({ className, short }: LangSwithcerProps) => {
   const { t } = useTranslation();
 
   const onToggle = async () => {
@@ -21,10 +22,10 @@ export const LangSwithcer = ({ className }: LangSwithcerProps) => {
   return (
     <Button
       className={classNames(cls.LangSwithcer, {}, [className])}
-      theme={ThemeButton.CLEAR}
+      theme={ButtonVariant.CLEAR}
       onClick={onToggle}
     >
-      {t('Язык')}
+      {t(short ? 'shortlang' : 'lang')}
     </Button>
   );
 };
