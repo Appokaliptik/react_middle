@@ -1,6 +1,5 @@
 import { classNames } from 'shared/libs/classNames/classNames';
 import { useTheme } from 'app/providers/ThemeProvider';
-import './styles/index.scss';
 import { Navbar } from 'widgets/navbar';
 import { Sidebar } from 'widgets/SIdebar';
 import { Suspense } from 'react';
@@ -14,6 +13,7 @@ const App = () => {
     <div className={classNames('app', {}, [theme])}>
       <Suspense fallback={<PageLoader />}>
         <Navbar />
+
         <div className="content-page">
           <Sidebar />
           <div className="wrapper-page">
