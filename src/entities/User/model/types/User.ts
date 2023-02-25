@@ -1,8 +1,8 @@
 export interface User {
-  id: string,
-  name: string
+  id: string;
+  username: string;
 }
 
 export interface UserScheme {
-  AuthData?: User
+  authData?: User
 }
