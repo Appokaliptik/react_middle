@@ -1,4 +1,4 @@
-export { User, UserScheme } from './model/types/userScheme';
+export { User, UserScheme } from './model/types/UserScheme';
 export {
   UserActions,
   UserReducer,

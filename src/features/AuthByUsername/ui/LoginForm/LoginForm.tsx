@@ -13,7 +13,6 @@ export const LoginForm = ({ className }: LoginFormProps) => {
   return (
     <div className={classNames(cls.LoginForm, {}, [className])}>
       <Input
-        className={cls.input}
         placeholder={t('Input name')}
       />
       <Input
