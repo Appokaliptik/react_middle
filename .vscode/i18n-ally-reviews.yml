@@ -214,3 +214,49 @@ reviews:
             suggestion: ''
             type: approve
             time: '2023-02-21T20:44:42.059Z'
+  Login:
+    locales:
+      ru:
+        comments:
+          - user:
+              name: Appokaliptik
+              email: alexanderstrannik@gmail.com
+            id: s1MCtsI4Y9iY6KQu7PGuX
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2023-02-25T18:03:14.705Z'
+      en:
+        comments:
+          - user:
+              name: Appokaliptik
+              email: alexanderstrannik@gmail.com
+            id: 2Tj86hZbJEoesHuJAtX-U
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2023-02-25T18:03:26.216Z'
+  Input name:
+    locales:
+      ru:
+        comments:
+          - user:
+              name: Appokaliptik
+              email: alexanderstrannik@gmail.com
+            id: SylMhfn9wIL9a0mrzvFss
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2023-02-25T20:58:49.553Z'
+  Input password:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Appokaliptik
+              email: alexanderstrannik@gmail.com
+            id: OlmOYNnN7dDxFOHkezX43
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2023-02-25T20:59:47.067Z'
