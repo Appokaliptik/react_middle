@@ -1,0 +1,23 @@
+.Text {
+  color: var(--primary-color);
+}
+
+.Text h2 {
+  font: var(--font-l);
+  color: var(--primary-color);
+}
+
+.Text p {
+  font: var(--font-m);
+  color: var(--secondary-color);
+}
+
+.error {
+  h2 {
+    color: var(--red-light);
+  }
+
+  p {
+    color: var(--red-dark);
+  }
+}
