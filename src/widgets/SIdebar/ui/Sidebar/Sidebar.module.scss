@@ -21,25 +21,6 @@
   flex-direction: column;
 }
 
-.item {
-  display: flex;
-  align-items: center;
-
-  & + & {
-    margin-top: 10px;
-  }
-}
-
-.icon {
-  fill: var(--inverted-primary-color);
-  width: 20px;
-}
-
-.link {
-  margin-left: 5px;
-  opacity: 1;
-}
-
 .lang {
   margin-left: 15px;
 }
@@ -56,13 +37,6 @@
   .switchers {
     flex-direction: column;
     align-items: center;
-  }
-
-  .link {
-    width: 0;
-    opacity: 0;
-    transition: 0.1s;
-    height: var(--line-height-m);
   }
 
   .lang {

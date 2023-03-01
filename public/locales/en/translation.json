@@ -2,8 +2,9 @@
   "lang": "English",
   "shortlang": "En",
   "not found": "Page not found",
-  "Меню главная": "Main",
-  "Меню о сайте": "About us",
+  "Menu main": "Main",
+  "Menu about": "About us",
+  "Menu profile": "Profile",
   "errorButton": "Throw an error",
   "smth error": "Something went wrong",
   "refreshButton": "Refresh",
@@ -16,5 +17,6 @@
   "Input password": "Input password",
   "LoginForm": "Login form",
   "errorForm": "Wrong login or password",
-  "logout": "Logout"
+  "logout": "Logout",
+  "profile": "Profile"
 }

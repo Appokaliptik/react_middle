@@ -1,4 +1,5 @@
 import { configureStore, ReducersMapObject } from '@reduxjs/toolkit';
+import { Return } from 'aws-sdk/clients/cloudsearchdomain';
 import { counterReducer } from 'entities/Counter';
 import { UserReducer } from 'entities/User';
 import { createReducerManager } from './reducerManager';
@@ -27,3 +28,5 @@ export function createReduxStore(
 
   return store;
 }
+
+export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch'];

@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import i18n from 'shared/config/i18n/i18';
 import { classNames } from 'shared/libs/classNames/classNames';
@@ -13,7 +14,7 @@ export enum Lang {
   EN = 'en'
 }
 
-export const LangSwithcer = ({ className, short }: LangSwithcerProps) => {
+export const LangSwithcer = memo(({ className, short }: LangSwithcerProps) => {
   const { t } = useTranslation();
 
   const onToggle = async () => {
@@ -28,4 +29,4 @@ export const LangSwithcer = ({ className, short }: LangSwithcerProps) => {
       {t(short ? 'shortlang' : 'lang')}
     </Button>
   );
-};
+});
