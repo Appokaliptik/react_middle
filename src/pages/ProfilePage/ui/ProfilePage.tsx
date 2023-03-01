@@ -21,5 +21,4 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     </DynamicModuleLoader>
   );
 };
-
 export default ProfilePage;
