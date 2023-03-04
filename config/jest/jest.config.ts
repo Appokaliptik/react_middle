@@ -46,6 +46,7 @@ export default {
   },
   globals: {
     __IS_DEV: true,
+    __API: '',
   },
 
   // An array of regexp pattern strings that are matched against all test paths,

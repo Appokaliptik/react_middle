@@ -52,13 +52,13 @@ export const TitleTextError = Template.bind({});
 TitleTextError.args = {
   title: 'title',
   text: 'text text text',
-  Theme: TextTheme.ERROR,
+  theme: TextTheme.ERROR,
 };
 
 export const TitleTextErrorDark = Template.bind({});
 TitleTextErrorDark.args = {
   title: 'title',
   text: 'text text text',
-  Theme: TextTheme.ERROR,
+  theme: TextTheme.ERROR,
 };
 TitleTextErrorDark.decorators = [ThemeDecorator(Theme.DARK)];

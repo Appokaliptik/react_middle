@@ -7,7 +7,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 /* eslint-disable global-require */
 /* eslint-disable import/no-dynamic-require */
 
-const ns = ['translation', 'about', 'main'];
+const ns = ['profile', 'translation', 'about', 'main'];
 const supportedLngs = ['en', 'ru'];
 const resources = ns.reduce((acc, n) => {
   supportedLngs.forEach((lng) => {
@@ -34,10 +34,14 @@ i18n
 
     defaultNS: 'translation',
     ns,
+    // returnNull: false,
     interpolation: { escapeValue: false },
     react: { useSuspense: false },
     supportedLngs,
     resources,
+    // backend: {
+    //   loadPath: "./locales/{{lng}}/{{ns}}.json",
+    // },
   });
 
 export default i18n;
