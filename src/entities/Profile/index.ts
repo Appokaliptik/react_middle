@@ -1,8 +1,7 @@
 export {
   Profile,
   ProfileScheme,
-} from './model/types/profile';
-
+} from './model/types/Profile';
 export {
   profileActions,
   profileReducer,
