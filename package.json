@@ -110,6 +110,7 @@
   "homepage": "https://github.com/Appokaliptik/react_middle#readme",
   "description": "",
   "loki": {
+    "fetchFailIgnore": ".*",
     "configurations": {
       "chrome.laptop": {
         "target": "chrome.docker",

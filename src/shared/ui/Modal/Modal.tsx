@@ -1,5 +1,5 @@
 import {
-  MouseEvent, MutableRefObject, ReactNode, useCallback, useEffect, useRef, useState,
+  MutableRefObject, ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react';
 import { classNames, Mods } from 'shared/libs/classNames/classNames';
 import { Portal } from '../Portal/Portal';
@@ -7,10 +7,10 @@ import cls from './Modal.module.scss';
 
 interface ModalProps {
   className?: string;
-  children: ReactNode;
+  children?: ReactNode;
   isOpen?: boolean;
   onClose?: () => void;
-  lazy: boolean,
+  lazy?: boolean;
 }
 const ANIMATION_DELAY = 300;
 
@@ -47,7 +47,10 @@ export const Modal = (props: ModalProps) => {
       }, ANIMATION_DELAY);
     }
   }, [onClose]);
-  const onContentClick = (e: MouseEvent) => e.stopPropagation();
+
+  const onContentClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+  };
 
   const onKeyDown = useCallback((e: KeyboardEvent) => {
     if (e.key === 'Escape') {
@@ -59,6 +62,7 @@ export const Modal = (props: ModalProps) => {
     if (isOpen) {
       window.addEventListener('keydown', onKeyDown);
     }
+
     return () => {
       clearTimeout(timerRef.current);
       window.removeEventListener('keydown', onKeyDown);
