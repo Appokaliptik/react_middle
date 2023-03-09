@@ -2,5 +2,15 @@
   "profile page": "Profile",
   "edit": "Edit",
   "input firstname": "Enter your name",
-  "input lastname": "Enter last name"
+  "input lastname": "Enter last name",
+  "profile error": "An error occurred while loading the profile",
+  "profile error text": "Try reloading the page",
+  "Cancel": "Cancel",
+  "Save": "Save",
+  "input age": "Enter age",
+  "input city": "Enter city",
+  "input username": "Enter Nickname",
+  "input avatar": "Enter link to avatar",
+  "currency": "Currency",
+  "Country": "Country"
 }

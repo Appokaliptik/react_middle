@@ -1,5 +1,5 @@
 .InputWrapper {
-  display: flex;
+  margin: 0;
 }
 
 .Input {
@@ -8,5 +8,14 @@
   color: var(--primary-color);
   height: 40px;
   width: 100%;
+  margin: 5px 0 0;
   padding: 0 10px;
+}
+
+.readonly {
+  opacity: 0.8;
+}
+
+.readonly input:focus {
+  outline: none;
 }

@@ -43,6 +43,19 @@ OutlineDark.args = {
 };
 OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
 
+export const OutlineRed = Template.bind({});
+OutlineRed.args = {
+  children: 'Text',
+  theme: ButtonVariant.OUTLINE_RED,
+};
+
+export const OutlineRedDark = Template.bind({});
+OutlineRedDark.args = {
+  children: 'Text',
+  theme: ButtonVariant.OUTLINE_RED,
+};
+OutlineRedDark.decorators = [ThemeDecorator(Theme.DARK)];
+
 export const Background = Template.bind({});
 Background.args = {
   children: 'Text',

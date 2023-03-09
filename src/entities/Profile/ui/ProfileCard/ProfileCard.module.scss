@@ -3,12 +3,8 @@
   padding: 20px;
 }
 
-.header {
-  display: flex;
-}
-
-.editBtn {
-  margin-left: auto;
+.editForm {
+  border: 1px solid var(--inverted-primary-color);
 }
 
 .data {
@@ -17,4 +13,19 @@
 
 .input {
   margin-top: 15px;
+}
+
+.loading,
+.error {
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatarWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 20px;
 }

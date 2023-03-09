@@ -7,7 +7,8 @@ import { RoutePath } from 'shared/config/AppRoutes/AppRoutes';
 export interface SidebarItemTypes {
   path: string,
   text: string,
-  Icon: FunctionComponent<SVGAttributes<SVGElement>>
+  Icon: FunctionComponent<SVGAttributes<SVGElement>>,
+  authOnly?: boolean;
 }
 
 export const SidebarItemList: SidebarItemTypes[] = [
@@ -25,5 +26,6 @@ export const SidebarItemList: SidebarItemTypes[] = [
     path: RoutePath.profile,
     Icon: ProfileIcon,
     text: 'Menu profile',
+    authOnly: true,
   },
 ];

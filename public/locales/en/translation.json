@@ -18,5 +18,7 @@
   "LoginForm": "Login form",
   "errorForm": "Wrong login or password",
   "logout": "Logout",
-  "profile": "Profile"
+  "profile": "Profile",
+  "currency": "Currency",
+  "Country": "Country"
 }
