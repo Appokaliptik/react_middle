@@ -12,5 +12,10 @@
   "input username": "Введите никнейм",
   "input avatar": "Введите ссылку на аватар",
   "currency": "Валюта",
-  "Country": "Страна"
+  "Country": "Страна",
+  "incorrect age": "Некорректный возраст",
+  "incorrect  city": "Некорректный город",
+  "incorrect user data": "Имя и фамилия обязательны",
+  "incorrect data": "Нет данных о профиле",
+  "incorrect server error": "Серверная ошибка при сохраненииСерверная ошибка при сохранении"
 }

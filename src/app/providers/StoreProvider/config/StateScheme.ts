@@ -7,6 +7,7 @@ import { ProfileScheme } from 'entities/Profile';
 import { UserScheme } from 'entities/User';
 import { LoginScheme } from 'features/AuthByUsername';
 import { NavigateOptions, To } from 'react-router-dom';
+import { ValidateProfileError } from '../../../../entities/Profile/model/types/Profile';
 
 export interface StateScheme {
   counter: CounterScheme,

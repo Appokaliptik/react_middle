@@ -12,5 +12,10 @@
   "input username": "Enter Nickname",
   "input avatar": "Enter link to avatar",
   "currency": "Currency",
-  "Country": "Country"
+  "Country": "Country",
+  "incorrect age": "Incorrect age",
+  "incorrect  city": "Incorrect city",
+  "incorrect user data": "First and last name are required",
+  "incorrect data": "No profile data",
+  "incorrect server error": "Server error on save Server error on save"
 }

@@ -1,3 +1,9 @@
+import { validateProfileData } from './model/services/validateProfileData/validateProfileData';
+
+export {
+  getProfileValidateErrors,
+} from './model/selectors/getProfileValidateErrors/getProfileValidateErrors';
+
 export {
   getProfileForm,
 } from './model/selectors/getProfileForm/getProfileForm';
@@ -25,6 +31,7 @@ export {
 export {
   Profile,
   ProfileScheme,
+  ValidateProfileError,
 } from './model/types/Profile';
 export {
   profileActions,
