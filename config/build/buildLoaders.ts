@@ -1,4 +1,5 @@
 import webpack from 'webpack';
+import ReactRefreshTypeScript from 'react-refresh-typescript';
 import { BuildOption } from './types/config';
 import { buildCssLoaders } from './loaders/buildCssLoaders';
 
@@ -7,7 +8,17 @@ export function buildLoaders({ isDev }: BuildOption): webpack.RuleSetRule[] {
 
   const typescriptLoader = {
     test: /\.tsx?$/,
-    use: 'ts-loader',
+    use: [
+      {
+        loader: require.resolve('ts-loader'),
+        options: {
+          getCustomTransformers: () => ({
+            before: [isDev && ReactRefreshTypeScript()].filter(Boolean),
+          }),
+          // transpileOnly: isDev,
+        },
+      },
+    ],
     exclude: /node_modules/,
   };
 
