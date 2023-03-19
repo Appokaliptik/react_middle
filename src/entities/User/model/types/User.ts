@@ -4,6 +4,6 @@ export interface User {
 }
 
 export interface UserScheme {
-  authData?: User
-  _isAuth: boolean
+  authData?: User;
+  _initStatus: boolean;
 }

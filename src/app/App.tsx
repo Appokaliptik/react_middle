@@ -4,13 +4,13 @@ import { Sidebar } from 'widgets/SIdebar';
 import { Suspense, useEffect } from 'react';
 import { PageLoader } from 'features/PageLoader';
 import { useDispatch, useSelector } from 'react-redux';
-import { getIsAuthStatus, UserActions } from 'entities/User';
+import { getInitStatus, UserActions } from 'entities/User';
 import { AppRouter } from './providers/router';
 
 const App = () => {
   const dispatch = useDispatch();
 
-  const inited = useSelector(getIsAuthStatus);
+  const inited = useSelector(getInitStatus);
   useEffect(() => {
     dispatch(UserActions.initAuthData());
   }, [dispatch]);

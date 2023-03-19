@@ -14,6 +14,6 @@ export default {
 
 const Template: ComponentStory<typeof [FTName]> = (args) => < [FTName] { ...args } />;
 
-export const Dark = Template.bind({});
-Dark.args = {};
-Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
+export const Normal = Template.bind({});
+Normal.args = {};
+Normal.decorators = [ThemeDecorator(Theme.LIGHT), StoreDecorator({})];

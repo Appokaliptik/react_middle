@@ -4,6 +4,11 @@
   margin: 0;
   padding: 7px 15px;
   border: 0;
+  &:hover {
+    opacity: 0.8;
+    fill-opacity: 0.8;
+    stroke-opacity: 0.8;
+  }
 }
 
 .clear,
@@ -32,6 +37,7 @@
 
 .square {
   padding: 0;
+  z-index: 2;
 }
 
 .square.size_m {

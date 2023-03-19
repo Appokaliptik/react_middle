@@ -380,3 +380,15 @@ reviews:
             suggestion: ''
             type: approve
             time: '2023-03-04T21:04:50.562Z'
+  ArticlesPage header:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Appokaliptik
+              email: alexanderstrannik@gmail.com
+            id: DP6X6jubWqiDUDMli4gDH
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2023-03-13T09:29:26.481Z'

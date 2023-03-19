@@ -3,7 +3,6 @@
 }
 
 .Text h2 {
-  font: var(--font-l);
   color: var(--primary-color);
 }
 
@@ -32,4 +31,24 @@
 
 .right {
   text-align: right;
+}
+
+.size_m {
+  h2 {
+    font: var(--font-l);
+  }
+
+  p {
+    font: var(--font-m);
+  }
+}
+
+.size_l {
+  h2 {
+    font: var(--font-xl);
+  }
+
+  p {
+    font: var(--font-l);
+  }
 }
