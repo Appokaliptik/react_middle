@@ -7,6 +7,7 @@ import { CounterScheme } from 'entities/Counter';
 import { ProfileScheme } from 'entities/Profile';
 import { UserScheme } from 'entities/User';
 import { LoginScheme } from 'features/AuthByUsername';
+import { ArticleDetailsCommentsScheme } from 'pages/ArticleDetailsPage';
 import { NavigateOptions, To } from 'react-router-dom';
 
 export interface StateScheme {
@@ -16,6 +17,7 @@ export interface StateScheme {
   LoginForm?: LoginScheme,
   profile?: ProfileScheme,
   articleDetails?: ArticleDetailsScheme,
+  ArticleDetailsComments?: ArticleDetailsCommentsScheme
 }
 
 export type StateSchemeKey = keyof StateScheme;

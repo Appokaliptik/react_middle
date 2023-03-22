@@ -6,7 +6,7 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { ArticleDetails } from './ArticleDetails';
 
 export default {
-  title: 'shared/ArticleDetails',
+  title: 'entities/ArticleDetails',
   component: ArticleDetails,
   argTypes: {
     backgroundColor: { control: 'color' },

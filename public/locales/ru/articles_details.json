@@ -1,5 +1,7 @@
 {
   "ArticleDetailsPage header": "Пример статьи",
   "articles not found": "Статья на найдена",
-  "Article loading error": "Произошла ошибка при загрузке статьи."
+  "Article loading error": "Произошла ошибка при загрузке статьи.",
+  "Comment title": "Комментарии",
+  "no comments": "Комментарии отсутствуют"
 }

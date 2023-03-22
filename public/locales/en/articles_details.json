@@ -1,5 +1,7 @@
 {
   "ArticleDetailsPage header": "Article Example",
   "articles not found": "Article not found",
-  "Article loading error": "An error occurred while loading the article."
+  "Article loading error": "An error occurred while loading the article.",
+  "Comment title": "Comments",
+  "no comments": "No comments"
 }

@@ -100,13 +100,22 @@
   "users": [{
       "id": "1",
       "username": "admin",
-      "password": "123"
+      "password": "123",
+      "avatar": "https://cdn-icons-png.flaticon.com/512/7421/7421730.png"
     },
     {
       "id": "2",
-      "username": "user",
+      "username": "user 1",
       "password": "123",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://cdn-icons-png.flaticon.com/512/7421/7421750.png"
+    },
+    {
+      "id": "3",
+      "username": "user 2",
+      "password": "123",
+      "role": "USER",
+      "avatar": "https://cdn-icons-png.flaticon.com/512/7421/7421782.png"
     }
   ],
   "profile": {
