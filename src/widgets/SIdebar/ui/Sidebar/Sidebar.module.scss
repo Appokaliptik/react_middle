@@ -5,6 +5,7 @@
   transition: width 0.3s;
   position: relative;
   padding: 15px;
+  flex-shrink: 0;
 }
 
 .switchers {

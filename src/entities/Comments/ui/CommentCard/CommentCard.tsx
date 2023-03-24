@@ -3,12 +3,14 @@ import { memo } from 'react';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
 import { Text } from 'shared/ui/Text/Text';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
+import { AppLink } from 'shared/ui/AppLink/AppLink';
+import { RoutePath } from 'shared/config/AppRoutes/AppRoutes';
 import cls from './CommentCard.module.scss';
 import { Comments } from '../../models/types/comments';
 
 interface CommentCardProps {
   className?: string;
-  comments: Comments;
+  comments?: Comments;
   isLoading?: boolean;
 }
 
@@ -16,7 +18,7 @@ export const CommentCard = memo((props: CommentCardProps) => {
   const { className, comments, isLoading } = props;
   if (isLoading) {
     return (
-      <div className={classNames(cls.CommentCard, {}, [className])}>
+      <div className={classNames(cls.CommentCard, {}, [className, cls.loading])}>
         <div className={cls.header}>
           <Skeleton width={30} height={30} border="50%" className={cls.avatar} />
           <Skeleton height={16} width={100} />
@@ -25,12 +27,16 @@ export const CommentCard = memo((props: CommentCardProps) => {
       </div>
     );
   }
+
+  if (!comments) {
+    return null;
+  }
   return (
     <div className={classNames(cls.CommentCard, {}, [className])}>
-      <div className={cls.header}>
+      <AppLink to={`${RoutePath.profile}${comments.user.id}`} className={cls.header}>
         {comments.user.avatar ? <Avatar size={30} src={comments.user.avatar} className={cls.avatar} /> : null}
         <Text title={comments.user.username} />
-      </div>
+      </AppLink>
       <Text className={cls.text} text={comments.text} />
     </div>
   );

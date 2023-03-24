@@ -1,6 +1,6 @@
 import { classNames } from 'shared/libs/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { memo } from 'react';
+import { memo, Suspense, useCallback } from 'react';
 import { ArticleDetails } from 'entities/Articles';
 import { useParams } from 'react-router-dom';
 import { Text } from 'shared/ui/Text/Text';
@@ -10,6 +10,11 @@ import { useSelector } from 'react-redux';
 import { getArticleCommentsIsLoading } from 'pages/ArticleDetailsPage/models/selectors/comments';
 import { useInitialEffect } from 'shared/libs/hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from 'shared/libs/hooks/useAppDispatch/useAppDispatch';
+import { AddCommentForm } from 'features/addCommentForm';
+import { Loader } from 'shared/ui/Loader/Loader';
+import {
+  addCommentForArticle,
+} from '../../models/services/fetchCommentsByArticleId/addCommentForArticle/addCommentForArticle';
 import {
   fetchCommentsByArticleId,
 } from '../../models/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
@@ -34,6 +39,9 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   useInitialEffect(() => {
     dispatch(fetchCommentsByArticleId(id));
   });
+  const onSendComment = useCallback((text: string) => {
+    dispatch(addCommentForArticle(text));
+  }, [dispatch]);
 
   if (!id && __PROJECT !== 'storybook') {
     return (
@@ -48,6 +56,9 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
       <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <ArticleDetails id={id || '1'} />
         <Text title={t('Comment title')} className={cls.title} />
+        <Suspense fallback={<Loader />}>
+          <AddCommentForm onSendComment={onSendComment} />
+        </Suspense>
         <CommentList
           comments={comments}
           isLoading={commentIsLoading}

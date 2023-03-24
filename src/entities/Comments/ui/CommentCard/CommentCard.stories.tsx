@@ -5,7 +5,7 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { CommentCard } from './CommentCard';
 
 export default {
-  title: 'entities/CommentCard',
+  title: 'entities/Comments/CommentCard',
   component: CommentCard,
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -29,5 +29,13 @@ Normal.decorators = [ThemeDecorator(Theme.LIGHT), StoreDecorator({})];
 
 export const Loading = Template.bind({});
 Loading.args = {
+  comments: {
+    id: '1',
+    text: 'comment 1',
+    user: {
+      id: '1',
+      username: 'name user',
+    },
+  },
   isLoading: true,
 };

@@ -21,5 +21,7 @@
   "logout": "Logout",
   "profile": "Profile",
   "currency": "Currency",
-  "Country": "Country"
+  "Country": "Country",
+  "send": "Send",
+  "Input comment": "Enter comment text"
 }

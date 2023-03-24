@@ -26,6 +26,7 @@ DarkEmpty.decorators = [ThemeDecorator(Theme.DARK)];
 export const WithData = Template.bind({});
 WithData.args = {
   data: {
+    id: '1',
     username: 'admin',
     age: 22,
     country: Country.Russia,
@@ -40,6 +41,7 @@ WithData.args = {
 export const DarkWithData = Template.bind({});
 DarkWithData.args = {
   data: {
+    id: '1',
     username: 'admin',
     age: 22,
     country: Country.Russia,

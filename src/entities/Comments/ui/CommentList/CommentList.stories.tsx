@@ -5,7 +5,7 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { CommentList } from './CommentList';
 
 export default {
-  title: 'entities/CommentList',
+  title: 'entities/Comments/CommentList',
   component: CommentList,
   argTypes: {
     backgroundColor: { control: 'color' },
