@@ -1,6 +1,7 @@
 import { classNames } from 'shared/libs/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
+import { Article, ArticleList, ArticleView } from 'entities/Articles';
 import cls from './ArticlesPage.module.scss';
 
 interface ArticlesPageProps {
@@ -13,6 +14,11 @@ const ArticlesPage = (props: ArticlesPageProps) => {
   return (
     <div className={classNames(cls.ArticlesPage, {}, [className])}>
       {t('ArticlesPage header')}
+      <ArticleList
+        view={ArticleView.LIST}
+        isLoading
+        articles={[]}
+      />
     </div>
   );
 };

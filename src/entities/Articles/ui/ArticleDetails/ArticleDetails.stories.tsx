@@ -6,7 +6,7 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { ArticleDetails } from './ArticleDetails';
 
 export default {
-  title: 'entities/ArticleDetails',
+  title: 'entities/Article/ArticleDetails',
   component: ArticleDetails,
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -23,6 +23,11 @@ const article: Article = {
   views: 1022,
   createdAt: '26.02.2022',
   type: [ArticleType.IT],
+  user: {
+    id: '1',
+    username: 'admin',
+    avatar: 'https://cdn-icons-png.flaticon.com/512/7421/7421730.png',
+  },
   blocks: [
     {
       id: '1',
