@@ -1,0 +1,13 @@
+.ArticleViewSelector {
+  display: flex;
+  justify-content: end;
+  margin: 0 0 20px;
+}
+
+.icon {
+  margin-left: 10px;
+}
+
+.selected {
+  fill: var(--primary-color);
+}
