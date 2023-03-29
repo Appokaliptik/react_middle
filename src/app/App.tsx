@@ -22,9 +22,7 @@ const App = () => {
 
         <div className="content-page">
           <Sidebar />
-          <div className="wrapper-page">
-            {inited && <AppRouter />}
-          </div>
+          {inited && <AppRouter />}
         </div>
       </Suspense>
     </div>

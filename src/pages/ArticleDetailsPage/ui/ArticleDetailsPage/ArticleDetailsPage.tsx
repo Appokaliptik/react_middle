@@ -14,6 +14,7 @@ import { AddCommentForm } from 'features/addCommentForm';
 import { Loader } from 'shared/ui/Loader/Loader';
 import { Button, ButtonVariant } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/AppRoutes/AppRoutes';
+import { Page } from 'shared/ui/Page/Page';
 import {
   addCommentForArticle,
 } from '../../models/services/fetchCommentsByArticleId/addCommentForArticle/addCommentForArticle';
@@ -52,15 +53,15 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
   if (!id && __PROJECT !== 'storybook') {
     return (
-      <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+      <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         {t('articles not found')}
-      </div>
+      </Page>
     );
   }
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+      <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <Button theme={ButtonVariant.OUTLINE} onClick={onBackToList}>
           {t('back to list')}
         </Button>
@@ -73,7 +74,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
           comments={comments}
           isLoading={commentIsLoading}
         />
-      </div>
+      </Page>
 
     </DynamicModuleLoader>
   );
