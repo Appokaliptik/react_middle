@@ -3,6 +3,7 @@ import {
 } from '@reduxjs/toolkit';
 import { counterReducer } from 'entities/Counter';
 import { UserReducer } from 'entities/User';
+import { scrollPositionReducer } from 'features/ScrollPosition';
 import { $api } from 'shared/api/api';
 import { createReducerManager } from './reducerManager';
 import { StateScheme, ThunkExtraType } from './StateScheme';
@@ -15,6 +16,7 @@ export function createReduxStore(
     ...asyncReducers,
     counter: counterReducer,
     user: UserReducer,
+    scrollPosition: scrollPositionReducer,
   };
 
   const extraArg: ThunkExtraType = {

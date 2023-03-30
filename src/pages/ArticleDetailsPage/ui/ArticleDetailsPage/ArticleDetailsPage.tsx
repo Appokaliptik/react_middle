@@ -14,7 +14,7 @@ import { AddCommentForm } from 'features/addCommentForm';
 import { Loader } from 'shared/ui/Loader/Loader';
 import { Button, ButtonVariant } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/AppRoutes/AppRoutes';
-import { Page } from 'shared/ui/Page/Page';
+import { Page } from 'widgets/Page/Page';
 import {
   addCommentForArticle,
 } from '../../models/services/fetchCommentsByArticleId/addCommentForArticle/addCommentForArticle';

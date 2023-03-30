@@ -8,6 +8,7 @@ import { ProfileScheme } from 'entities/Profile';
 import { UserScheme } from 'entities/User';
 import { addCommentFormScheme } from 'features/addCommentForm';
 import { LoginScheme } from 'features/AuthByUsername';
+import { ScrollPositionScheme } from 'features/ScrollPosition';
 import { ArticleDetailsCommentsScheme } from 'pages/ArticleDetailsPage';
 import { ArticlesPageScheme } from 'pages/ArticlesPage';
 import { NavigateOptions, To } from 'react-router-dom';
@@ -15,6 +16,7 @@ import { NavigateOptions, To } from 'react-router-dom';
 export interface StateScheme {
   counter: CounterScheme,
   user: UserScheme,
+  scrollPosition: ScrollPositionScheme,
   // async
   LoginForm?: LoginScheme,
   profile?: ProfileScheme,
