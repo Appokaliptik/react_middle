@@ -1,6 +1,6 @@
 import { ArticleList, ArticleView, ArticleViewSelector } from 'entities/Articles';
 import {
-  memo, useCallback, useEffect,
+  memo, useCallback,
 } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
@@ -9,11 +9,10 @@ import { DynamicModuleLoader, ReducersList } from 'shared/libs/components/Dynami
 import { useAppDispatch } from 'shared/libs/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/libs/hooks/useInitialEffect/useInitialEffect';
 import { Page } from 'shared/ui/Page/Page';
+import { initArticlesPage } from '../../models/services/initArticlesPage/initArticlesPage';
 import {
-  getArticlesPageError,
-  getArticlesPageIsLoading, getArticlesPageView,
+  getArticlesPageError, getArticlesPageIsLoading, getArticlesPageView,
 } from '../../models/selectors/articlesPageSelectors';
-import { fetchArticlesList } from '../../models/services/fetchArticlesList/fetchArticlesList';
 import { fetchNextArticlesPage } from '../../models/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { articlesPageActions, articlesPageReducer, getArticles } from '../../models/slices/articlesPageSlice';
 import cls from './ArticlesPage.module.scss';
@@ -44,13 +43,12 @@ const ArticlesPage = (props: ArticlesPageProps) => {
     }
   }, [dispatch]);
 
-  useEffect(() => {
-    dispatch(articlesPageActions.initState());
-    dispatch(fetchArticlesList({ page: 1 }));
-  }, [dispatch]);
+  useInitialEffect(() => {
+    dispatch(initArticlesPage());
+  });
 
   return (
-    <DynamicModuleLoader reducers={reducers}>
+    <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
       <Page
         onScrollEnd={onLoadNextPart}
         className={classNames(cls.ArticlesPage, {}, [className])}
