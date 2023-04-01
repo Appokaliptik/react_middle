@@ -404,7 +404,7 @@
     },
     {
       "id": "16",
-      "title": "Marketing news",
+      "title": "Marketing news 1",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://expertpromotion.ru/images/marketing2.jpg",
       "views": 1022,
@@ -418,7 +418,7 @@
       "blocks": [{
         "id": "1",
         "type": "TEXT",
-        "title": "Заголовок этого блока",
+        "title": "Заголовок этого блока 2",
         "paragraphs": [
           "Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.",
           "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы.",
@@ -428,11 +428,11 @@
     },
     {
       "id": "17",
-      "title": "MARKETING news",
-      "subtitle": "Что нового в JS за 2022 год?",
+      "title": "MARKETING news wer",
+      "subtitle": "Что старого в JS за 2022 год?",
       "img": "https://www.calltouch.ru/upload/medialibrary/d22/d22f6fabce6ab1bb83ced8ea318a4392.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 23432,
+      "createdAt": "21.02.2022",
       "userId": "1",
       "type": [
         "MARKETING"
@@ -450,11 +450,11 @@
     },
     {
       "id": "18",
-      "title": "Analitics news",
+      "title": "Analitics news 234",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://static-eu.insales.ru/files/1/2374/13412678/original/4_631e30043d647316c99d130ab4d2b94b.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 103222,
+      "createdAt": "26.02.2023",
       "userId": "1",
       "type": [
         "IT",
@@ -476,8 +476,8 @@
       "title": "Marketing news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://expertpromotion.ru/images/marketing2.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 10122,
+      "createdAt": "26.02.2002",
       "userId": "1",
       "type": [
         "IT",

@@ -1,5 +1,7 @@
 import { classNames } from 'shared/libs/classNames/classNames';
 import { memo } from 'react';
+import { Text, TextSize } from 'shared/ui/Text/Text';
+import { useTranslation } from 'react-i18next';
 import cls from './ArticleList.module.scss';
 import { Article, ArticleView } from '../../models/types/article';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
@@ -26,6 +28,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
     isLoading,
     view = ArticleView.TILE,
   } = props;
+  const { t } = useTranslation('articles');
 
   const renderArticle = (article: Article) => (
     <ArticleListItem
@@ -35,6 +38,17 @@ export const ArticleList = memo((props: ArticleListProps) => {
       key={article.id}
     />
   );
+
+  if (!isLoading && !articles.length) {
+    return (
+      <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+        <Text
+          size={TextSize.L}
+          title={t('No articles')}
+        />
+      </div>
+    );
+  }
   return (
     <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
       {articles.length > 0

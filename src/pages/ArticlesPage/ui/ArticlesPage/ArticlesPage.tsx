@@ -1,4 +1,4 @@
-import { ArticleList, ArticleView, ArticleViewSelector } from 'entities/Articles';
+import { ArticleList } from 'entities/Articles';
 import {
   memo, useCallback,
 } from 'react';
@@ -9,13 +9,15 @@ import { DynamicModuleLoader, ReducersList } from 'shared/libs/components/Dynami
 import { useAppDispatch } from 'shared/libs/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/libs/hooks/useInitialEffect/useInitialEffect';
 import { Page } from 'widgets/Page/Page';
-import { initArticlesPage } from '../../models/services/initArticlesPage/initArticlesPage';
+import { useSearchParams } from 'react-router-dom';
 import {
   getArticlesPageError, getArticlesPageIsLoading, getArticlesPageView,
 } from '../../models/selectors/articlesPageSelectors';
 import { fetchNextArticlesPage } from '../../models/services/fetchNextArticlesPage/fetchNextArticlesPage';
-import { articlesPageActions, articlesPageReducer, getArticles } from '../../models/slices/articlesPageSlice';
+import { initArticlesPage } from '../../models/services/initArticlesPage/initArticlesPage';
+import { articlesPageReducer, getArticles } from '../../models/slices/articlesPageSlice';
 import cls from './ArticlesPage.module.scss';
+import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 
 interface ArticlesPageProps {
   className?: string;
@@ -29,13 +31,10 @@ const ArticlesPage = (props: ArticlesPageProps) => {
   const { t } = useTranslation('articles');
   const dispatch = useAppDispatch();
   const articles = useSelector(getArticles.selectAll);
-  const isLoading = useSelector(getArticlesPageIsLoading);
   const view = useSelector(getArticlesPageView);
+  const isLoading = useSelector(getArticlesPageIsLoading);
   const error = useSelector(getArticlesPageError);
-
-  const onChangeView = useCallback((view: ArticleView) => {
-    dispatch(articlesPageActions.setView(view));
-  }, [dispatch]);
+  const [searchParams] = useSearchParams();
 
   const onLoadNextPart = useCallback(() => {
     if (__PROJECT !== 'storybook') {
@@ -44,7 +43,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
   }, [dispatch]);
 
   useInitialEffect(() => {
-    dispatch(initArticlesPage());
+    dispatch(initArticlesPage(searchParams));
   });
 
   return (
@@ -54,7 +53,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
         className={classNames(cls.ArticlesPage, {}, [className])}
       >
         {t('ArticlesPage header')}
-        <ArticleViewSelector view={view} onViewClick={onChangeView} />
+        <ArticlesPageFilters />
         <ArticleList
           view={view}
           isLoading={isLoading}

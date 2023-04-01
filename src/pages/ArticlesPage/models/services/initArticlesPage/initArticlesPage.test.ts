@@ -4,6 +4,9 @@ import { initArticlesPage } from './initArticlesPage';
 
 jest.mock('../fetchArticlesList/fetchArticlesList');
 
+const paramsString = '';
+const searchParams = new URLSearchParams(paramsString);
+
 describe('initArticlesPage', () => {
   test('correct', async () => {
     const thunk = new TestAsyncThunk(initArticlesPage, {
@@ -18,10 +21,10 @@ describe('initArticlesPage', () => {
       },
     });
 
-    const result = await thunk.callThunk();
+    const result = await thunk.callThunk(searchParams);
 
     expect(thunk.dispatch).toBeCalledTimes(4);
-    expect(fetchArticlesList).toHaveBeenCalledWith({ page: 1 });
+    expect(fetchArticlesList).toHaveBeenCalledWith({});
   });
   test('wrong inited', async () => {
     const thunk = new TestAsyncThunk(initArticlesPage, {
@@ -36,7 +39,7 @@ describe('initArticlesPage', () => {
       },
     });
 
-    const result = await thunk.callThunk();
+    const result = await thunk.callThunk(searchParams);
 
     expect(thunk.dispatch).toBeCalledTimes(2);
     expect(fetchArticlesList).not.toBeCalled();
