@@ -61,24 +61,26 @@ Normal.decorators = [ThemeDecorator(Theme.LIGHT), StoreDecorator({
   articleDetails: {
     data: article,
   },
-  ArticleDetailsComments: {
-    ids: ['1', '2'],
-    entities: {
-      1:
-      {
-        id: '1',
-        text: 'comment 1',
-        user: {
+  ArticleDetailsPages: {
+    comments: {
+      ids: ['1', '2'],
+      entities: {
+        1:
+        {
           id: '1',
-          username: 'name user',
+          text: 'comment 1',
+          user: {
+            id: '1',
+            username: 'name user',
+          },
         },
-      },
-      2: {
-        id: '2',
-        text: 'comment 2',
-        user: {
-          id: '1',
-          username: 'name user',
+        2: {
+          id: '2',
+          text: 'comment 2',
+          user: {
+            id: '1',
+            username: 'name user',
+          },
         },
       },
     },

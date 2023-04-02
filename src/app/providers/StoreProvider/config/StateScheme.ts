@@ -9,7 +9,7 @@ import { UserScheme } from 'entities/User';
 import { addCommentFormScheme } from 'features/addCommentForm';
 import { LoginScheme } from 'features/AuthByUsername';
 import { ScrollPositionScheme } from 'features/ScrollPosition';
-import { ArticleDetailsCommentsScheme } from 'pages/ArticleDetailsPage';
+import { ArticleDetailsPageScheme } from 'pages/ArticleDetailsPage/models/types';
 import { ArticlesPageScheme } from 'pages/ArticlesPage';
 import { NavigateOptions, To } from 'react-router-dom';
 
@@ -21,7 +21,7 @@ export interface StateScheme {
   LoginForm?: LoginScheme,
   profile?: ProfileScheme,
   articleDetails?: ArticleDetailsScheme,
-  ArticleDetailsComments?: ArticleDetailsCommentsScheme,
+  ArticleDetailsPages?: ArticleDetailsPageScheme,
   addCommentForm?: addCommentFormScheme,
   ArticlesPage?: ArticlesPageScheme,
 }

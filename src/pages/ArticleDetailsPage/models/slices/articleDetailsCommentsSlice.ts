@@ -14,7 +14,7 @@ const commentsAdapter = createEntityAdapter<Comments>({
 });
 // Can create a set of memoized selectors based on the location of this entity state
 export const getArticleComments = commentsAdapter.getSelectors<StateScheme>(
-  (state) => state.ArticleDetailsComments || commentsAdapter.getInitialState(),
+  (state) => state.ArticleDetailsPages?.comments || commentsAdapter.getInitialState(),
 );
 
 const articleDetailsCommentsSlice = createSlice({
