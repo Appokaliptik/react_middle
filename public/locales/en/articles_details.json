@@ -5,5 +5,8 @@
   "Comment title": "Comments",
   "no comments": "No comments",
   "back to list": "Back to list",
-  "Recommended": "Recommended"
+  "Recommended": "Recommended",
+  "Edit": "Edit",
+  "Edit page header": "Editing an article with ID =",
+  "Create article header": "Create a new article"
 }

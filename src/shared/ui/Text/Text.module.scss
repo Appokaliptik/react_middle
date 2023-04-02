@@ -21,6 +21,16 @@
   }
 }
 
+.inverted {
+  h2 {
+    color: var(--inverted-primary-color);
+  }
+
+  p {
+    color: var(--inverted-secondary-color);
+  }
+}
+
 .left {
   text-align: left;
 }

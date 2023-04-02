@@ -14,3 +14,22 @@
 .mainLink {
   margin-right: 15px;
 }
+
+.logoContainer {
+  width: var(--sidebar-width);
+}
+
+.logo {
+  display: flex;
+  flex-wrap: nowrap;
+  text-decoration: none;
+  align-items: center;
+
+  svg {
+    margin-right: 5px;
+  }
+}
+
+.createBtn {
+  margin-left: 25px;
+}
