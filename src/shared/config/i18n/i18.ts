@@ -30,6 +30,7 @@ i18n
   .init({
     fallbackLng: 'en',
     lng: 'ru', // default language
+    // debug: false,
     debug: __IS_DEV,
 
     defaultNS: 'translation',
@@ -39,9 +40,9 @@ i18n
     react: { useSuspense: false },
     supportedLngs,
     resources,
-    // backend: {
-    //   loadPath: "./locales/{{lng}}/{{ns}}.json",
-    // },
+    backend: {
+      loadPath: './locales/{{lng}}/{{ns}}.json',
+    },
   });
 
 export default i18n;

@@ -21,6 +21,11 @@ export function buildPlugins({
       filename: 'css/[name].[contenthash:8].css',
       chunkFilename: 'css/[name].[contenthash:8].css',
     }),
+    new webpack.DefinePlugin({
+      __IS_DEV: JSON.stringify(isDev),
+      __API: JSON.stringify(apiUrl),
+      __PROJECT: JSON.stringify(project),
+    }),
     new CopyPlugin({
       patterns: [
         { from: paths.locales, to: paths.buildLocales },
@@ -31,11 +36,6 @@ export function buildPlugins({
   if (isDev) {
     plugins.push(
       new ReactRefreshWebpackPlugin(),
-      new webpack.DefinePlugin({
-        __IS_DEV: JSON.stringify(isDev),
-        __API: JSON.stringify(apiUrl),
-        __PROJECT: JSON.stringify(project),
-      }),
       new BundleAnalyzerPlugin({
         openAnalyzer: false,
       }),
