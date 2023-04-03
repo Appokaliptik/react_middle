@@ -1,6 +1,3 @@
 import { lazy } from 'react';
 
-export const AritcleEditPageAsync = lazy(() => new Promise((resolve) => {
-  // @ts-expect-error
-  setTimeout(() => { resolve(import('./AritcleEditPage')); }, 400);
-}));
+export const AritcleEditPageAsync = lazy(() => import('./AritcleEditPage'));
