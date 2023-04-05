@@ -12,6 +12,7 @@ import { useDebounce } from 'shared/libs/hooks/useDebounce/useDebounce';
 import { SortOrder } from 'shared/types/sortOrder';
 import { Card } from 'shared/ui/Card/Card';
 import { Input } from 'shared/ui/Input/Input';
+import { HStack, VStack } from 'shared/ui/Stack';
 import {
   getArticlesPageOrder, getArticlesPageSearch, getArticlesPageSort, getArticlesPageType, getArticlesPageView,
 } from '../../models/selectors/articlesPageSelectors';
@@ -68,8 +69,8 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
   }, [dispatch, fetchData]);
 
   return (
-    <div className={classNames(cls.ArticlesPageFilters, {}, [className])}>
-      <div className={cls.sortWrapper}>
+    <VStack gap="16" max>
+      <HStack gap="16" justify="between" max>
         <ArticleSortSelector
           order={order}
           sort={sort}
@@ -80,8 +81,8 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
           view={view}
           onViewClick={onChangeView}
         />
-      </div>
-      <Card className={cls.search}>
+      </HStack>
+      <Card max>
         <Input
           onChange={onChangeSearch}
           value={search}
@@ -91,8 +92,7 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
       <ArticleTypeTabs
         value={type}
         onChangeType={onChangeType}
-        className={cls.tabs}
       />
-    </div>
+    </VStack>
   );
 });

@@ -3,6 +3,7 @@ import {
   ChangeEvent, InputHTMLAttributes, memo,
 } from 'react';
 import cls from './Input.module.scss';
+import { VStack } from '../Stack';
 
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readonly'>
 
@@ -31,7 +32,7 @@ export const Input = memo((props: InputProps) => {
     [cls.readonly]: readonly,
   };
   return (
-    <div className={classNames(cls.InputWrapper, mods, [className])}>
+    <VStack gap="4" max className={classNames(cls.InputWrapper, mods, [className])}>
       <div>{placeholder}</div>
       <input
         type={type}
@@ -42,6 +43,6 @@ export const Input = memo((props: InputProps) => {
         readOnly={readonly}
         {...otherProps}
       />
-    </div>
+    </VStack>
   );
 });

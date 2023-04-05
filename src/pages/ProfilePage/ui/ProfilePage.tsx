@@ -1,9 +1,8 @@
-import { classNames } from 'shared/libs/classNames/classNames';
-import { useTranslation } from 'react-i18next';
-import { DynamicModuleLoader, ReducersList } from 'shared/libs/components/DynamicModuleLoader';
-import { useAppDispatch } from 'shared/libs/hooks/useAppDispatch/useAppDispatch';
-import { useCallback, useEffect } from 'react';
+import { Country } from 'entities/Country';
+import { Currency } from 'entities/Currency';
 import {
+  ProfileCard,
+  ValidateProfileError,
   fetchProfileData,
   getProfileError,
   getProfileForm,
@@ -11,16 +10,18 @@ import {
   getProfileReadonly,
   getProfileValidateErrors,
   profileActions,
-  ProfileCard,
   profileReducer,
-  ValidateProfileError,
 } from 'entities/Profile';
+import { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
-import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useParams } from 'react-router-dom';
+import { classNames } from 'shared/libs/classNames/classNames';
+import { DynamicModuleLoader, ReducersList } from 'shared/libs/components/DynamicModuleLoader';
+import { useAppDispatch } from 'shared/libs/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/libs/hooks/useInitialEffect/useInitialEffect';
+import { VStack } from 'shared/ui/Stack';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { Page } from 'widgets/Page/Page';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
@@ -91,28 +92,31 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames('', {}, [className])}>
-        <ProfilePageHeader />
-        {errors?.length && errors.map((item) => (
-          <Text
-            theme={TextTheme.ERROR}
-            text={validateErrorsTranslates[item]}
-            key={item}
+        <VStack gap="16">
+          <ProfilePageHeader />
+          {errors?.length && errors.map((item) => (
+            <Text
+              theme={TextTheme.ERROR}
+              text={validateErrorsTranslates[item]}
+              key={item}
+            />
+          ))}
+          <ProfileCard
+            data={formData}
+            isLoading={isLoading}
+            error={error}
+            readonly={readonly}
+            onChangeFirst={onChangeFirst}
+            onChangeLastname={onChangeLastname}
+            onChangeAge={onChangeAge}
+            onChangeCity={onChangeCity}
+            onChangeUsername={onChangeUsername}
+            onChangeAvatar={onChangeAvatar}
+            onChangeCurrency={onChangeCurrency}
+            onChangeCountry={onChangeCountry}
           />
-        ))}
-        <ProfileCard
-          data={formData}
-          isLoading={isLoading}
-          error={error}
-          readonly={readonly}
-          onChangeFirst={onChangeFirst}
-          onChangeLastname={onChangeLastname}
-          onChangeAge={onChangeAge}
-          onChangeCity={onChangeCity}
-          onChangeUsername={onChangeUsername}
-          onChangeAvatar={onChangeAvatar}
-          onChangeCurrency={onChangeCurrency}
-          onChangeCountry={onChangeCountry}
-        />
+
+        </VStack>
       </Page>
     </DynamicModuleLoader>
   );

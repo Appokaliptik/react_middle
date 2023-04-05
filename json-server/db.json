@@ -565,6 +565,12 @@
       "text": "test comment",
       "userId": "1",
       "id": "FRZ8eMs"
+    },
+    {
+      "articleId": "3",
+      "text": "test",
+      "userId": "1",
+      "id": "4_LLsom"
     }
   ],
   "users": [

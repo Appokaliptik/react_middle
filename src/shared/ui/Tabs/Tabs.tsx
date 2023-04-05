@@ -2,6 +2,7 @@ import { ReactNode, memo, useCallback } from 'react';
 import { classNames } from 'shared/libs/classNames/classNames';
 import cls from './Tabs.module.scss';
 import { Card, CardTheme } from '../Card/Card';
+import { HStack } from '../Stack';
 
 export interface TabItem {
   value: string;
@@ -23,7 +24,7 @@ export const Tabs = memo((props: TabsProps) => {
   }, [onTabClick]);
 
   return (
-    <div className={classNames(cls.Tabs, {}, [className])}>
+    <HStack gap="8" className={classNames(cls.Tabs, {}, [className])}>
       {tabs.map((tab) => (
         <Card
           theme={tab.value === value ? CardTheme.OUTLINED : CardTheme.NORMAL}
@@ -34,6 +35,6 @@ export const Tabs = memo((props: TabsProps) => {
           {tab.content}
         </Card>
       ))}
-    </div>
+    </HStack>
   );
 });

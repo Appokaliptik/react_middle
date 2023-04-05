@@ -1,14 +1,15 @@
-import { classNames, Mods } from 'shared/libs/classNames/classNames';
-import { Input } from 'shared/ui/Input/Input';
-import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
-import { useTranslation } from 'react-i18next';
-import { Profile } from 'entities/Profile';
-import { Loader } from 'shared/ui/Loader/Loader';
-import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { Currency } from 'entities/Currency/models/types/Currency';
-import { Country } from 'entities/Country/models/types/Country';
 import { CountrySelect } from 'entities/Country';
+import { Country } from 'entities/Country/models/types/Country';
 import { CurrencySelect } from 'entities/Currency';
+import { Currency } from 'entities/Currency/models/types/Currency';
+import { Profile } from 'entities/Profile';
+import { useTranslation } from 'react-i18next';
+import { classNames, Mods } from 'shared/libs/classNames/classNames';
+import { Avatar } from 'shared/ui/Avatar/Avatar';
+import { Input } from 'shared/ui/Input/Input';
+import { Loader } from 'shared/ui/Loader/Loader';
+import { HStack, VStack } from 'shared/ui/Stack';
+import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 import cls from './ProfileCard.module.scss';
 
 interface ProfileCardProps {
@@ -51,32 +52,32 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
   if (isLoading) {
     return (
-      <div className={classNames(cls.ProfileCard, {}, [className, cls.loading])}>
+      <VStack max justify="center" align="center" className={classNames(cls.ProfileCard, {}, [className, cls.loading])}>
         <Loader />
-      </div>
+      </VStack>
     );
   }
 
   if (error) {
     return (
-      <div className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
+      <VStack max className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
         <Text
           theme={TextTheme.ERROR}
           title={t('profile error')}
           text={t('profile error text')}
           align={TextAlign.CENTER}
         />
-      </div>
+      </VStack>
     );
   }
 
   return (
-    <div className={classNames(cls.ProfileCard, mods, [className])}>
+    <VStack gap="16" max className={classNames(cls.ProfileCard, mods, [className])}>
       {data?.avatar
         && (
-          <div className={cls.avatarWrapper}>
+          <HStack justify="center" className={cls.avatarWrapper}>
             <Avatar src={data.avatar} />
-          </div>
+          </HStack>
         )}
       <Input
         value={data?.first}
@@ -131,6 +132,6 @@ export const ProfileCard = (props: ProfileCardProps) => {
         readonly={readonly}
         onChange={onChangeCurrency}
       />
-    </div>
+    </VStack>
   );
 };

@@ -1,12 +1,13 @@
-import { classNames } from 'shared/libs/classNames/classNames';
-import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 import ListIcon from 'shared/assets/icons/list.svg';
 import TileIcon from 'shared/assets/icons/tile.svg';
+import { classNames } from 'shared/libs/classNames/classNames';
 import { Button, ButtonVariant } from 'shared/ui/Button/Button';
 import { Icon } from 'shared/ui/Icon/Icon';
-import cls from './ArticleViewSelector.module.scss';
+import { HStack } from 'shared/ui/Stack';
 import { ArticleView } from '../../models/types/article';
+import cls from './ArticleViewSelector.module.scss';
 
 interface ArticleViewSelectorProps {
   className?: string;
@@ -33,7 +34,7 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
   };
 
   return (
-    <div className={classNames(cls.ArticleViewSelector, {}, [className])}>
+    <HStack gap="8">
       {viewTypes.map((viewType, index) => (
         <Button
           theme={ButtonVariant.CLEAR}
@@ -47,6 +48,6 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
           />
         </Button>
       ))}
-    </div>
+    </HStack>
   );
 });

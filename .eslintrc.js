@@ -23,6 +23,7 @@ module.exports = {
     '@typescript-eslint',
     'i18next',
     'react-hooks',
+    // 'appo-fsd-plugin',
   ],
   rules: {
     'react/jsx-indent': [2, 2],
@@ -44,7 +45,7 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'i18next/no-literal-string': ['error', {
       markupOnly: true,
-      ignoreAttribute: ['data-testid', 'to', 'target'],
+      ignoreAttribute: ['data-testid', 'to', 'target', 'justify', 'align', 'direction', 'gap'],
     }],
     'max-len': ['error', {
       ignoreComments: true,
@@ -57,6 +58,7 @@ module.exports = {
     'no-param-reassign': 'off',
     'no-undef': 'off',
     'arrow-body-style': 'off',
+    // 'appo-fsd-plugin/path-ckecker': 'error',
   },
   globals: {
     __IS_DEV: true,

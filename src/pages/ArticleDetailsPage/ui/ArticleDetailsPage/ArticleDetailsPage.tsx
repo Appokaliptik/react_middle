@@ -18,6 +18,7 @@ import { useInitialEffect } from 'shared/libs/hooks/useInitialEffect/useInitialE
 import { Loader } from 'shared/ui/Loader/Loader';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import { Page } from 'widgets/Page/Page';
+import { VStack } from 'shared/ui/Stack';
 import { getArticleRecommendationsIsLoading } from '../../models/selectors/recommendations';
 import {
   fetchArticleRecommendations,
@@ -68,23 +69,26 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-        <ArticleDetailsPageHeader />
-        <ArticleDetails id={id || '1'} />
-        <Text size={TextSize.L} title={t('Recommended')} className={cls.title} />
-        <ArticleList
-          articles={recommendtations}
-          isLoading={recommendtationsIsLoading}
-          className={cls.recommendations}
-          target="_blank"
-        />
-        <Text size={TextSize.L} title={t('Comment title')} className={cls.title} />
-        <Suspense fallback={<Loader />}>
-          <AddCommentForm onSendComment={onSendComment} />
-        </Suspense>
-        <CommentList
-          comments={comments}
-          isLoading={commentIsLoading}
-        />
+        <VStack gap="16" max>
+          <ArticleDetailsPageHeader />
+          <ArticleDetails id={id || '1'} />
+          <Text size={TextSize.L} title={t('Recommended')} className={cls.title} />
+          <ArticleList
+            articles={recommendtations}
+            isLoading={recommendtationsIsLoading}
+            className={cls.recommendations}
+            target="_blank"
+          />
+          <Text size={TextSize.L} title={t('Comment title')} className={cls.title} />
+          <Suspense fallback={<Loader />}>
+            <AddCommentForm onSendComment={onSendComment} />
+          </Suspense>
+          <CommentList
+            comments={comments}
+            isLoading={commentIsLoading}
+          />
+
+        </VStack>
       </Page>
 
     </DynamicModuleLoader>
