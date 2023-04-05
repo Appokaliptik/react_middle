@@ -9,16 +9,15 @@ import {
 import { Suspense, memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { useNavigate, useParams } from 'react-router-dom';
-import { RoutePath } from 'shared/config/AppRoutes/AppRoutes';
+import { useParams } from 'react-router-dom';
 import { classNames } from 'shared/libs/classNames/classNames';
 import { DynamicModuleLoader, ReducersList } from 'shared/libs/components/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/libs/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/libs/hooks/useInitialEffect/useInitialEffect';
 import { Loader } from 'shared/ui/Loader/Loader';
+import { VStack } from 'shared/ui/Stack';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import { Page } from 'widgets/Page/Page';
-import { VStack } from 'shared/ui/Stack';
 import { getArticleRecommendationsIsLoading } from '../../models/selectors/recommendations';
 import {
   fetchArticleRecommendations,
