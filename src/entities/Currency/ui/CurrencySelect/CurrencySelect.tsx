@@ -2,12 +2,14 @@ import { classNames } from 'shared/libs/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Select } from 'shared/ui/Select/Select';
 import { memo, useCallback } from 'react';
+import { DropdownDirection, ListBox } from 'shared/ui/ListBox/ListBox';
 import { Currency } from '../../models/types/Currency';
 
 interface CurrencySelectProps {
   className?: string;
   readonly?: boolean;
   value?: Currency;
+  direction?: DropdownDirection,
   onChange?: (value: Currency) => void;
 
 }
@@ -23,6 +25,7 @@ export const CurrencySelect = memo((props: CurrencySelectProps) => {
     value,
     onChange,
     readonly,
+    direction,
   } = props;
   const { t } = useTranslation('translation');
 
@@ -31,14 +34,14 @@ export const CurrencySelect = memo((props: CurrencySelectProps) => {
   }, [onChange]);
 
   return (
-    <Select
+    <ListBox
       className={classNames('', {}, [className])}
       value={value}
       label={t('currency')}
       onChange={onChangeHandler}
-      options={options}
+      items={options}
       readonly={readonly}
-
+      direction={direction}
     />
   );
 });

@@ -2,12 +2,14 @@ import { classNames } from 'shared/libs/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Select } from 'shared/ui/Select/Select';
 import { memo, useCallback } from 'react';
+import { DropdownDirection, ListBox } from 'shared/ui/ListBox/ListBox';
 import { Country } from '../../models/types/Country';
 
 interface CountrySelectProps {
   className?: string;
   readonly?: boolean;
   value?: Country;
+  direction?: DropdownDirection,
   onChange?: (value: Country) => void;
 
 }
@@ -25,6 +27,7 @@ export const CountrySelect = memo((props: CountrySelectProps) => {
     value,
     onChange,
     readonly,
+    direction,
   } = props;
   const { t } = useTranslation('translation');
 
@@ -33,14 +36,14 @@ export const CountrySelect = memo((props: CountrySelectProps) => {
   }, [onChange]);
 
   return (
-    <Select
+    <ListBox
       className={classNames('', {}, [className])}
       value={value}
       label={t('Country')}
       onChange={onChangeHandler}
-      options={options}
+      items={options}
       readonly={readonly}
-
+      direction={direction}
     />
   );
 });
