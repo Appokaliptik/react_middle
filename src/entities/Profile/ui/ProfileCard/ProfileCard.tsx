@@ -125,14 +125,14 @@ export const ProfileCard = (props: ProfileCardProps) => {
         value={data?.country}
         readonly={readonly}
         onChange={onChangeCountry}
-        direction="top"
+        direction="top right"
       />
       <CurrencySelect
         className={cls.input}
         value={data?.currency}
         readonly={readonly}
         onChange={onChangeCurrency}
-        direction="top"
+        direction="top right"
       />
     </VStack>
   );

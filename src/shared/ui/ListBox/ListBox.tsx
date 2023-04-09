@@ -3,14 +3,13 @@ import { Fragment, useState } from 'react';
 import { classNames } from 'shared/libs/classNames/classNames';
 import cls from './ListBox.module.scss';
 import { HStack } from '../Stack';
+import { DropdownDirection } from '../../types/ui';
 
 export interface ListBoxItem {
   value: string,
   content: string,
   disabled?: boolean
 }
-
-export type DropdownDirection = 'top' | 'bottom';
 
 interface ListBoxProps {
   className?: string;
@@ -24,8 +23,10 @@ interface ListBoxProps {
 }
 
 const mapDirectionClass: Record<DropdownDirection, string> = {
-  bottom: cls.optionsBottom,
-  top: cls.optionsTop,
+  'bottom left': cls.optionsBottomLeft,
+  'bottom right': cls.optionsBottomRight,
+  'top right': cls.optionsTopRight,
+  'top left': cls.optionsTopLeft,
 };
 
 export function ListBox(props: ListBoxProps) {
@@ -37,7 +38,7 @@ export function ListBox(props: ListBoxProps) {
     readonly,
     value,
     onChange,
-    direction = 'bottom',
+    direction = 'bottom right',
   } = props;
 
   const optionsClasses = [mapDirectionClass[direction]];
@@ -72,16 +73,11 @@ export function ListBox(props: ListBoxProps) {
                 <li
                   className={classNames(cls.item, {
                     [cls.active]: active,
+                    [cls.selected]: selected,
                     [cls.disabled]: item.disabled,
                   })}
                 >
-                  {selected
-                    ? (
-                      <span className={cls.selected}>
-                        {item.content}
-                      </span>
-                    )
-                    : item.content}
+                  {item.content}
                 </li>
               )}
             </HListbox.Option>
