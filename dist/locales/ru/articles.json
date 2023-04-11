@@ -12,5 +12,6 @@
   "IT": "IT",
   "ANALYTICS": "Аналитика",
   "MARKETING": "Маркетинг",
-  "No articles": "Статьи не найдены"
+  "No articles": "Статьи не найдены",
+  "error load article": "Ошибка при загрузке статей"
 }
