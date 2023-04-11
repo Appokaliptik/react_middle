@@ -86,7 +86,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
   }, [dispatch]);
 
   return (
-    <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+    <DynamicModuleLoader reducers={reducers}>
       <VStack
         gap="16"
         max
@@ -99,6 +99,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
             theme={TextTheme.ERROR}
             text={validateErrorsTranslates[item]}
             key={item}
+            data-testid="EditableProfileCard.Error"
           />
         ))}
 
