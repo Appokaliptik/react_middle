@@ -18,7 +18,7 @@ const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage {...
 
 export const Normal = Template.bind({});
 Normal.args = {};
-Normal.decorators = [StoreDecorator({
+Normal.decorators = [ThemeDecorator(Theme.LIGHT), StoreDecorator({
   profile: {
     form: {
       username: 'admin',
