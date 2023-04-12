@@ -3,6 +3,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { Article, ArticleBlockType, ArticleType } from 'entities/Articles/models/types/article';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { UserRole } from 'entities/User';
 import { ArticleDetails } from './ArticleDetails';
 
 export default {
@@ -27,6 +28,7 @@ const article: Article = {
     id: '1',
     username: 'admin',
     avatar: 'https://cdn-icons-png.flaticon.com/512/7421/7421730.png',
+    role: [UserRole.ADMIN],
   },
   blocks: [
     {

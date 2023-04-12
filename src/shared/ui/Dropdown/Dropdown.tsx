@@ -50,6 +50,7 @@ export const Dropdown = (props: DropdownProps) => {
               className={classNames(cls.item, { [cls.active]: active })}
               // eslint-disable-next-line react/no-array-index-key
               key={index}
+            // key={String(item.content)}
             >
               {item.content}
             </button>

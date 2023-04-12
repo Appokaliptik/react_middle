@@ -1,4 +1,4 @@
-import { getUserAuthData } from 'entities/User';
+import { getUserAuthData, isAdmin, isManager } from 'entities/User';
 import { UserActions, UserSlice } from 'entities/User/model/slice/UserSlice';
 import { LoginModal } from 'features/AuthByUsername';
 import { memo, useCallback, useState } from 'react';
@@ -24,6 +24,10 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   const [isAuthModal, setIsAuthModal] = useState(false);
   const authData = useSelector(getUserAuthData);
   const dispatch = useDispatch();
+  const isUserAdmin = useSelector(isAdmin);
+  const isUserManager = useSelector(isManager);
+
+  const isAdminPanel = isUserAdmin || isUserManager;
 
   const onCloseModal = useCallback(() => {
     setIsAuthModal(false);
@@ -61,6 +65,10 @@ export const Navbar = memo(({ className }: NavbarProps) => {
             trigger={<Avatar size={30} src={authData.avatar} />}
             direction="bottom left"
             items={[
+              ...(isAdminPanel ? [{
+                content: t('Admin'),
+                href: RoutePath.admin_panel,
+              }] : []),
               {
                 content: t('profile'),
                 href: RoutePath.profile + authData.id,
