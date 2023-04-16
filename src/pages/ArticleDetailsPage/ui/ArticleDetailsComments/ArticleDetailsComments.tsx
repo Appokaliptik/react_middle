@@ -18,7 +18,7 @@ import { getArticleComments } from '../../models/slices/articleDetailsCommentsSl
 
 interface ArticleDetailsCommentsProps {
   className?: string;
-  id: string;
+  id: string | undefined;
 }
 
 export const ArticleDetailsComments = memo((props: ArticleDetailsCommentsProps) => {
