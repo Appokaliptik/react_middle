@@ -1,0 +1,23 @@
+{
+  "Admin": "Admin",
+  "Country": "Country",
+  "Create Article": "Create Article",
+  "Create article header": "Create article header",
+  "Input comment": "Input comment",
+  "Input name": "Input name",
+  "Input password": "Input password",
+  "Login": "Login",
+  "LoginForm": "LoginForm",
+  "currency": "currency",
+  "decrement": "decrement",
+  "errorButton": "errorButton",
+  "errorForm": "errorForm",
+  "increment": "increment",
+  "login": "login",
+  "logout": "logout",
+  "not found": "not found",
+  "profile": "profile",
+  "refreshButton": "refreshButton",
+  "send": "send",
+  "smth error": "smth error"
+}
