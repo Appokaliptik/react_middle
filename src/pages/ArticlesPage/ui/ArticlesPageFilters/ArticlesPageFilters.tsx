@@ -1,7 +1,7 @@
 import {
   ArticleSortField, ArticleSortSelector, ArticleView, ArticleViewSelector,
 } from 'entities/Articles';
-import { ArticleType } from 'entities/Articles/models/types/article';
+import { ArticleType } from 'entities/Articles/models/consts/ArticleConsts';
 import { ArticleTypeTabs } from 'entities/Articles/ui/ArticleTypeTabs/ArticleTypeTabs';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';

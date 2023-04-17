@@ -2,7 +2,7 @@ export {
   articleDetailsPageRecommendationsReducer,
 } from './models/slices/articleDetailsPageRecommendationsSlice';
 
-export {
+export type {
   ArticleDetailsCommentsScheme,
 } from './models/types/ArticleDetailsCommentsScheme';
 export {

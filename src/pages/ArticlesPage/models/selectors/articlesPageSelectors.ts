@@ -1,6 +1,6 @@
 import { StateScheme } from 'app/providers/StoreProvider';
 import { ArticleSortField, ArticleView } from 'entities/Articles';
-import { ArticleType } from 'entities/Articles/models/types/article';
+import { ArticleType } from 'entities/Articles/models/consts/ArticleConsts';
 
 export const getArticlesPageIsLoading = (state: StateScheme) => state.ArticlesPage?.isLoading || false;
 export const getArticlesPageError = (state: StateScheme) => state.ArticlesPage?.error;

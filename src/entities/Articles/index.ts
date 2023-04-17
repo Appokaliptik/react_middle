@@ -6,7 +6,8 @@ export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelecto
 
 export { ArticleList } from './ui/ArticleList/ArticleList';
 
-export { Article, ArticleView, ArticleSortField } from './models/types/article';
+export { ArticleView, ArticleSortField } from './models/consts/ArticleConsts';
+export type { Article } from './models/types/article';
 
-export { ArticleDetailsScheme } from './models/types/ArticleDetailsScheme';
+export type { ArticleDetailsScheme } from './models/types/ArticleDetailsScheme';
 export { ArticleDetails } from './ui/ArticleDetails/ArticleDetails';

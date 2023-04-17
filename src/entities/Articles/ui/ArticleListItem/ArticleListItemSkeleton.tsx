@@ -1,4 +1,4 @@
-import { ArticleView } from 'entities/Articles/models/types/article';
+import { ArticleView } from 'entities/Articles/models/consts/ArticleConsts';
 import { memo } from 'react';
 import { classNames } from 'shared/libs/classNames/classNames';
 import { Card } from 'shared/ui/Card/Card';
