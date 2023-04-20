@@ -1,8 +1,9 @@
-import { Theme } from 'app/providers/ThemeProvider';
 import {
-  memo, ReactNode, type ButtonHTMLAttributes, type FC,
+  ReactNode,
+  memo,
+  type ButtonHTMLAttributes,
 } from 'react';
-import { classNames, Mods } from 'shared/libs/classNames/classNames';
+import { Mods, classNames } from 'shared/libs/classNames/classNames';
 import cls from './Button.module.scss';
 
 export enum ButtonVariant {
