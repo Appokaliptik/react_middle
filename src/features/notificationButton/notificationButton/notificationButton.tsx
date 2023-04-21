@@ -1,5 +1,5 @@
 import { NotificationList } from 'entities/Notification';
-import { memo, useState } from 'react';
+import { memo, useCallback, useState } from 'react';
 import NotificationIcon from 'shared/assets/icons/notification.svg';
 import { classNames } from 'shared/libs/classNames/classNames';
 import { Icon } from 'shared/ui/Icon/Icon';
@@ -17,13 +17,13 @@ export const NotificationButton = memo((props: notificationButtonProps) => {
   const { className } = props;
   const [isOpen, setIsOpen] = useState(false);
 
-  const onOpenDrawer = () => {
+  const onOpenDrawer = useCallback(() => {
     setIsOpen(true);
-  };
+  }, []);
 
-  const onCloseDrawer = () => {
+  const onCloseDrawer = useCallback(() => {
     setIsOpen(false);
-  };
+  }, []);
 
   const trigger = (
     <Button onClick={onOpenDrawer} theme={ButtonVariant.CLEAR}>
