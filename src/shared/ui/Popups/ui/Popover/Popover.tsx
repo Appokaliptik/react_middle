@@ -16,7 +16,10 @@ interface PopoverProps {
 
 export function Popover(props: PopoverProps) {
   const {
-    className, trigger, direction = 'bottom right', children,
+    className,
+    trigger,
+    direction = 'bottom right',
+    children,
   } = props;
 
   const menuClasses = [mapDirectionClass[direction]];
@@ -25,7 +28,7 @@ export function Popover(props: PopoverProps) {
     <HPopover
       className={classNames(cls.popover, {}, [className, style.popups])}
     >
-      <HPopover.Button className={style.trigger}>
+      <HPopover.Button as="div" className={style.trigger}>
         {trigger}
       </HPopover.Button>
 
