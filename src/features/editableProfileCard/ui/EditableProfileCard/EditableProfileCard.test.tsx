@@ -1,10 +1,10 @@
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
-import { Profile } from 'entities/Profile';
-import { renderComponent } from 'shared/libs/tests/renderComponent/renderComponent';
-import { $api } from 'shared/api/api';
+import { Country } from '@/entities/Country';
+import { Currency } from '@/entities/Currency';
+import { Profile } from '@/entities/Profile';
+import { renderComponent } from '@/shared/libs/tests/renderComponent/renderComponent';
+import { $api } from '@/shared/api/api';
 import { profileReducer } from '../../model/slices/profileSlice';
 import { EditableProfileCard } from './EditableProfileCard';
 

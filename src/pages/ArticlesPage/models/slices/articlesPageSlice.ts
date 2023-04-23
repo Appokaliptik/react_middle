@@ -4,11 +4,11 @@ import {
   createSlice,
   PayloadAction,
 } from '@reduxjs/toolkit';
-import { StateScheme } from 'app/providers/StoreProvider';
-import { Article, ArticleSortField, ArticleView } from 'entities/Articles';
-import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
-import { SortOrder } from 'shared/types/sortOrder';
-import { ArticleType } from 'entities/Articles/models/consts/ArticleConsts';
+import { StateScheme } from '@/app/providers/StoreProvider';
+import { Article, ArticleSortField, ArticleView } from '@/entities/Articles';
+import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
+import { SortOrder } from '@/shared/types/sortOrder';
+import { ArticleType } from '@/entities/Articles/models/consts/ArticleConsts';
 import { fetchArticlesList } from '../services/fetchArticlesList/fetchArticlesList';
 import { ArticlesPageScheme } from '../types/ArticlesPageScheme';
 

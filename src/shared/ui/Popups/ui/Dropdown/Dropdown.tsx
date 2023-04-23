@@ -1,8 +1,8 @@
 import { Menu } from '@headlessui/react';
 import { Fragment, ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
-import { classNames } from 'shared/libs/classNames/classNames';
-import { DropdownDirection } from 'shared/types/ui';
+import { classNames } from '@/shared/libs/classNames/classNames';
+import { DropdownDirection } from '@/shared/types/ui';
 import { AppLink } from '../../../AppLink/AppLink';
 import cls from './Dropdown.module.scss';
 import style from '../../styles/popup.module.scss';

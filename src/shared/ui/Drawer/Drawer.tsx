@@ -3,8 +3,8 @@ import {
   memo,
   useCallback, useEffect,
 } from 'react';
-import { classNames } from 'shared/libs/classNames/classNames';
-import { useAnimationLibs } from 'shared/libs/components/AnimationProvider';
+import { classNames } from '@/shared/libs/classNames/classNames';
+import { useAnimationLibs } from '@/shared/libs/components/AnimationProvider';
 import { Overlay } from '../Overlay/Overlay';
 import { Portal } from '../Portal/Portal';
 import cls from './Drawer.module.scss';

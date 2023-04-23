@@ -1,8 +1,8 @@
 import { memo } from 'react';
-import { classNames } from 'shared/libs/classNames/classNames';
-import { AppLink } from 'shared/ui/AppLink/AppLink';
-import { Card, CardTheme } from 'shared/ui/Card/Card';
-import { Text } from 'shared/ui/Text/Text';
+import { classNames } from '@/shared/libs/classNames/classNames';
+import { AppLink } from '@/shared/ui/AppLink/AppLink';
+import { Card, CardTheme } from '@/shared/ui/Card/Card';
+import { Text } from '@/shared/ui/Text/Text';
 import { Notification } from '../../model/notification';
 import cls from './NotificationItem.module.scss';
 

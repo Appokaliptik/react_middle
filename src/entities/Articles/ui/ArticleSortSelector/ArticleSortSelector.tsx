@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { SortOrder } from 'shared/types/sortOrder';
-import { Select, SelectOption } from 'shared/ui/Select/Select';
-import { HStack } from 'shared/ui/Stack';
+import { SortOrder } from '@/shared/types/sortOrder';
+import { Select, SelectOption } from '@/shared/ui/Select/Select';
+import { HStack } from '@/shared/ui/Stack';
 import { ArticleSortField } from '../../models/consts/ArticleConsts';
 
 interface ArticleSortSelectorProps {

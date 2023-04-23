@@ -1,9 +1,9 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from 'app/providers/ThemeProvider';
-import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
-import avatar from 'shared/assets/test/storybook.png';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from '@/app/providers/ThemeProvider';
+import { Country } from '@/entities/Country';
+import { Currency } from '@/entities/Currency';
+import avatar from '@/shared/assets/test/storybook.png';
 import { ProfileCard } from './ProfileCard';
 
 export default {

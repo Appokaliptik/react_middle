@@ -1,5 +1,5 @@
-import { addCommentFormScheme } from 'features/addCommentForm';
-import { addCommentFormReducer, addCommentFormActions } from 'features/addCommentForm/models/slices/addCommentFormSlice';
+import { addCommentFormScheme } from '@/features/addCommentForm';
+import { addCommentFormReducer, addCommentFormActions } from '@/features/addCommentForm/models/slices/addCommentFormSlice';
 
 describe('addCommentForArticle test', () => {
   test('add new comment', () => {
