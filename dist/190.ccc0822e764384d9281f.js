@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkreact_middle=self.webpackChunkreact_middle||[]).push([[190],{5190:(e,a,r)=>{r.r(a),r.d(a,{default:()=>n});var c=r(4187),s=r(1072),t=r(7294),l=r(4876);var d=r(5893);const n=(0,t.memo)((function(e){var a=e.className,r=(0,s.$G)().t;return(0,d.jsx)(l.T,{className:(0,c.A)("Aa5Aw",{},[a]),children:r("Create article header")})}))}}]);
