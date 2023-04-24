@@ -6,7 +6,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 /* eslint-disable global-require */
 /* eslint-disable import/no-dynamic-require */
-
+// need for storybook change lang
 const ns = ['profile', 'translation', 'about', 'main', 'articles', 'articles_details', 'admin_panel'];
 const supportedLngs = ['en', 'ru'];
 const resources = ns.reduce((acc, n) => {
