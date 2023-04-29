@@ -1,5 +1,6 @@
 {
   "Admin": "Admin",
+  "Close": "Close",
   "Country": "Country",
   "Create Article": "Create Article",
   "Create article header": "Create article header",
@@ -8,6 +9,9 @@
   "Input password": "Input password",
   "Login": "Login",
   "LoginForm": "LoginForm",
+  "Send": "Send",
+  "Thank you for rating": "Thank you for rating",
+  "Your review": "Your review",
   "currency": "currency",
   "decrement": "decrement",
   "errorButton": "errorButton",
@@ -19,5 +23,8 @@
   "profile": "profile",
   "refreshButton": "refreshButton",
   "send": "send",
-  "smth error": "smth error"
+  "smth error": "smth error",
+  "Ваш отзыв": "Ваш отзыв",
+  "Закрыть": "Закрыть",
+  "Отправить": "Отправить"
 }

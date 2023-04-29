@@ -2,18 +2,22 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Theme } from '@/app/providers/ThemeProvider';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { [FTName] } from './[FTName]';
+import { RatingCard } from './RatingCard';
 
 export default {
-  title: 'shared/[FTName]',
-  component: [FTName],
+  title: 'entities/RatingCard',
+  component: RatingCard,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} as ComponentMeta<typeof [FTName]>;
+} as ComponentMeta<typeof RatingCard>;
 
-const Template: ComponentStory<typeof [FTName]> = (args) => < [FTName] { ...args } />;
+const Template: ComponentStory<typeof RatingCard> = (args) => <RatingCard {...args} />;
 
 export const Normal = Template.bind({});
-Normal.args = {};
+Normal.args = {
+  feedbackTitle: 'Заголовок в модалке',
+  hasFeedback: true,
+  title: 'Заголовок над звёздами',
+};
 Normal.decorators = [ThemeDecorator(Theme.LIGHT), StoreDecorator({})];

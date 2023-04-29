@@ -11,6 +11,7 @@ import { Page } from '@/widgets/Page/Page';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import cls from './ArticleDetailsPage.module.scss';
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
+import { ArticleRating } from '@/features/articleRating';
 
 interface ArticleDetailsPageProps {
   className?: string;
@@ -24,7 +25,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   const { t } = useTranslation('articles_details');
   const { id } = useParams<{ id: string }>();
 
-  if (!id && __PROJECT !== 'storybook') {
+  if (!id) {
     return (
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         {t('articles not found')}
@@ -37,7 +38,8 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <VStack gap="16" max>
           <ArticleDetailsPageHeader />
-          <ArticleDetails id={id || '1'} />
+          <ArticleDetails id={id} />
+          <ArticleRating articleId={id} />
           <ArticleRecommendationsList />
           <ArticleDetailsComments id={id} />
 

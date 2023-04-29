@@ -18,5 +18,6 @@
   "incorrect user data": "First and last name are required",
   "incorrect data": "No profile data",
   "incorrect server error": "Server error on save Server error on save",
-  "profile not found": "Profile not found"
+  "profile not found": "Profile not found",
+  "Your review": "your feedback"
 }

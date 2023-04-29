@@ -45,8 +45,7 @@ export const Dropdown = (props: DropdownProps) => {
               onClick={item.onClick}
               className={classNames(cls.item, { [style.active]: active })}
               // eslint-disable-next-line react/no-array-index-key
-              key={index}
-            // key={String(item.content)}
+              key={`dropdown-key-${index}`}
             >
               {item.content}
             </button>
@@ -60,7 +59,7 @@ export const Dropdown = (props: DropdownProps) => {
                 disabled={item.disabled}
                 refName="href"
                 // eslint-disable-next-line react/no-array-index-key
-                key={index}
+                key={`dropdown-key-${index}`}
               >
                 {content}
               </Menu.Item>
