@@ -2,7 +2,7 @@ import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { getCanEditArticle } from '@/pages/ArticleDetailsPage/models/selectors/article';
+import { getCanEditArticle } from '@/pages/ArticleDetailsPage';
 import { getArticleDetailsData } from '@/entities/Articles';
 import { RoutePath } from '@/shared/config/AppRoutes/AppRoutes';
 import { classNames } from '@/shared/libs/classNames/classNames';

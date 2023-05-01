@@ -1,3 +1,8 @@
+export type { ArticleDetailsPageScheme } from './models/types/index';
+export { getCanEditArticle } from './models/selectors/article';
+
+export { articleDetailsPageReducer } from './models/slices';
+
 export {
   articleDetailsPageRecommendationsReducer,
 } from './models/slices/articleDetailsPageRecommendationsSlice';

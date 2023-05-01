@@ -6,8 +6,8 @@ import { classNames } from '@/shared/libs/classNames/classNames';
 import { Button, ButtonVariant } from '@/shared/ui/Button/Button';
 import { Icon } from '@/shared/ui/Icon/Icon';
 import { HStack } from '@/shared/ui/Stack';
-import { ArticleView } from '@/entities/Articles/models/consts/ArticleConsts';
 import cls from './ArticleViewSelector.module.scss';
+import { ArticleView } from '../../models/consts/ArticleConsts';
 
 interface ArticleViewSelectorProps {
   className?: string;

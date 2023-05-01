@@ -10,9 +10,9 @@ import { addCommentFormScheme } from '@/features/addCommentForm';
 import { LoginScheme } from '@/features/AuthByUsername';
 import { ProfileScheme } from '@/features/editableProfileCard';
 import { ScrollPositionScheme } from '@/features/ScrollPosition';
-import { ArticleDetailsPageScheme } from '@/pages/ArticleDetailsPage/models/types';
 import { ArticlesPageScheme } from '@/pages/ArticlesPage';
 import { rtkApi } from '@/shared/api/rtkApi';
+import { ArticleDetailsPageScheme } from '@/pages/ArticleDetailsPage';
 
 export interface StateScheme {
   counter: CounterScheme,

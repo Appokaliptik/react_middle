@@ -7,7 +7,7 @@ import { Article } from '@/entities/Articles';
 import { ArticleRecommendationsList } from './ArticleRecommendationsList';
 
 export default {
-  title: 'features/ArticleRecommendationsList',
+  title: 'features/Article/ArticleRecommendationsList',
   component: ArticleRecommendationsList,
   argTypes: {
     backgroundColor: { control: 'color' },

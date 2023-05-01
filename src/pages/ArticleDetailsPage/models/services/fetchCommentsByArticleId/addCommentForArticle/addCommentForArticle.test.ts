@@ -1,4 +1,5 @@
 import { addCommentFormScheme } from '@/features/addCommentForm';
+// eslint-disable-next-line appo-fsd-plugin/public-api-imports
 import { addCommentFormReducer, addCommentFormActions } from '@/features/addCommentForm/models/slices/addCommentFormSlice';
 
 describe('addCommentForArticle test', () => {

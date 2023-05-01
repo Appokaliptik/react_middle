@@ -10,7 +10,6 @@ import { useInitialEffect } from '@/shared/libs/hooks/useInitialEffect/useInitia
 import { Currency } from '@/entities/Currency';
 import { Country } from '@/entities/Country';
 import { DynamicModuleLoader, ReducersList } from '@/shared/libs/components/DynamicModuleLoader/DynamicModuleLoader';
-import { ValidateProfileError } from '@/features/editableProfileCard/model/consts/editableProfileCardConsts';
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData';
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError';
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
@@ -19,6 +18,7 @@ import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/get
 import { getProfileValidateErrors } from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors';
 import { profileActions, profileReducer } from '../../model/slices/profileSlice';
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader';
+import { ValidateProfileError } from '../../model/consts/editableProfileCardConsts';
 
 interface EditableProfileCardProps {
   className?: string;

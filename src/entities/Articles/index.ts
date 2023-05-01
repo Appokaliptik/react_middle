@@ -1,3 +1,7 @@
+export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs';
+
+export { ArticleBlockType } from './models/consts/ArticleConsts';
+
 export { getArticleDetailsData } from './models/selectors/articleDetails';
 
 export { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelector';
@@ -6,7 +10,7 @@ export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelecto
 
 export { ArticleList } from './ui/ArticleList/ArticleList';
 
-export { ArticleView, ArticleSortField } from './models/consts/ArticleConsts';
+export { ArticleView, ArticleSortField, ArticleType } from './models/consts/ArticleConsts';
 export type { Article } from './models/types/article';
 
 export type { ArticleDetailsScheme } from './models/types/ArticleDetailsScheme';
