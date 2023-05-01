@@ -58,7 +58,10 @@ module.exports = {
     'no-param-reassign': 'off',
     'no-undef': 'off',
     'arrow-body-style': 'off',
-    'appo-fsd-plugin/public-api-imports': ['error', { alias: '@' }],
+    'appo-fsd-plugin/public-api-imports': ['error', {
+      alias: '@',
+      testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+    }],
     // 'appo-fsd-plugin/path-ckecker': ['error', { alias: '@' }],
   },
   globals: {
