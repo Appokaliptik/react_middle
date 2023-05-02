@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { ArticleDetails } from '@/entities/Articles';
 import { ArticleRecommendationsList } from '@/features/ArticleRecommendationsList';
-import { articleDetailsPageReducer } from '@/pages/ArticleDetailsPage';
 import { classNames } from '@/shared/libs/classNames/classNames';
 import { DynamicModuleLoader, ReducersList } from '@/shared/libs/components/DynamicModuleLoader/DynamicModuleLoader';
 import { VStack } from '@/shared/ui/Stack';
@@ -12,6 +11,7 @@ import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDet
 import cls from './ArticleDetailsPage.module.scss';
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
 import { ArticleRating } from '@/features/articleRating';
+import { articleDetailsPageReducer } from '../../models/slices';
 
 interface ArticleDetailsPageProps {
   className?: string;

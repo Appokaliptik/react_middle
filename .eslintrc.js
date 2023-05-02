@@ -62,6 +62,13 @@ module.exports = {
       alias: '@',
       testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
     }],
+    'appo-fsd-plugin/layer-imports': [
+      'error',
+      {
+        alias: '@',
+        ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+      },
+    ],
     // 'appo-fsd-plugin/path-ckecker': ['error', { alias: '@' }],
   },
   globals: {
