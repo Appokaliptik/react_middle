@@ -1,4 +1,5 @@
 import { Configuration as DevServerConfiguration } from 'webpack-dev-server';
+
 import { BuildOption } from './types/config';
 
 export function buildDevServer(options: BuildOption): DevServerConfiguration {

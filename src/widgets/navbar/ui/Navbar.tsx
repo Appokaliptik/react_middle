@@ -1,6 +1,7 @@
 import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+
 import { getUserAuthData } from '@/entities/User';
 import { LoginModal } from '@/features/AuthByUsername';
 import { AvatarDropdown } from '@/features/AvatarDropdown';
@@ -13,6 +14,7 @@ import { Button, ButtonVariant } from '@/shared/ui/Button';
 import { Icon } from '@/shared/ui/Icon';
 import { HStack } from '@/shared/ui/Stack';
 import { Text, TextTheme } from '@/shared/ui/Text';
+
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {

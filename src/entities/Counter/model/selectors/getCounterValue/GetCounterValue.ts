@@ -1,6 +1,8 @@
 import { createSelector } from '@reduxjs/toolkit';
-import { CounterScheme } from '@/entities/Counter';
+
 import { GetCounter } from '../getCounter/GetCounter';
+
+import { CounterScheme } from '@/entities/Counter';
 
 export const GetCounterValue = createSelector(
   GetCounter,

@@ -1,5 +1,12 @@
 import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
+
+import { ArticleBlockType, ArticleView } from '../../models/consts/ArticleConsts';
+import {
+  Article, ArticleTextBlock,
+} from '../../models/types/article';
+import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+
 import EyeIcon from '@/shared/assets/icons/eye.svg';
 import { RoutePath } from '@/shared/config/AppRoutes/AppRoutes';
 import { classNames } from '@/shared/libs/classNames/classNames';
@@ -9,12 +16,8 @@ import { Button, ButtonVariant } from '@/shared/ui/Button';
 import { Card } from '@/shared/ui/Card';
 import { Icon } from '@/shared/ui/Icon';
 import { Text } from '@/shared/ui/Text';
-import {
-  Article, ArticleTextBlock,
-} from '../../models/types/article';
-import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+
 import cls from './ArticleListItem.module.scss';
-import { ArticleBlockType, ArticleView } from '../../models/consts/ArticleConsts';
 
 interface ArticleListItemProps {
   className?: string;

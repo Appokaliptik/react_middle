@@ -1,8 +1,8 @@
 import webpack from 'webpack';
-import ReactRefreshTypeScript from 'react-refresh-typescript';
-import { BuildOption } from './types/config';
-import { buildCssLoaders } from './loaders/buildCssLoaders';
+
 import { buildBabelLoader } from './loaders/buildBabelLoader';
+import { buildCssLoaders } from './loaders/buildCssLoaders';
+import { BuildOption } from './types/config';
 
 export function buildLoaders(options: BuildOption): webpack.RuleSetRule[] {
   const { isDev } = options;

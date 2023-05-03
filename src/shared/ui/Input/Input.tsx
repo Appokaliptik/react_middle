@@ -1,9 +1,12 @@
 import {
   ChangeEvent, InputHTMLAttributes, memo,
 } from 'react';
-import { classNames, Mods } from '@/shared/libs/classNames/classNames';
-import cls from './Input.module.scss';
+
 import { VStack } from '../Stack';
+
+import { classNames, Mods } from '@/shared/libs/classNames/classNames';
+
+import cls from './Input.module.scss';
 
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readonly'>
 

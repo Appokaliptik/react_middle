@@ -1,7 +1,9 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+
+import { ArticleInfiniteList } from './ArticleInfiniteList';
+
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { ArticleInfiniteList } from './ArticleInfiniteList';
 import { Theme } from '@/shared/const/Theme';
 
 export default {

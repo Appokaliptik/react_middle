@@ -1,4 +1,5 @@
 import { CounterScheme } from '../types/counterSheme';
+
 import { counterActions, counterReducer } from './CounterSlice';
 
 describe('counter slicer', () => {

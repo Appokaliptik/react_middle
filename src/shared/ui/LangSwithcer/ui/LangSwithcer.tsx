@@ -1,8 +1,10 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
+
 import i18n from '@/shared/config/i18n/i18';
 import { classNames } from '@/shared/libs/classNames/classNames';
 import { Button, ButtonVariant } from '@/shared/ui/Button';
+
 import cls from './LangSwithcer.module.scss';
 
 interface LangSwithcerProps {

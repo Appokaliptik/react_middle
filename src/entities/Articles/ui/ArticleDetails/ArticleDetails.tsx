@@ -1,29 +1,32 @@
-import { useTranslation } from 'react-i18next';
 import { memo, useCallback, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { useAppDispatch } from '@/shared/libs/hooks/useAppDispatch/useAppDispatch';
-import { classNames } from '@/shared/libs/classNames/classNames';
-import { Text, TextAlign, TextSize } from '@/shared/ui/Text';
-import { DynamicModuleLoader, ReducersList } from '@/shared/libs/components/DynamicModuleLoader/DynamicModuleLoader';
-import { Skeleton } from '@/shared/ui/Skeleton';
-import { Avatar } from '@/shared/ui/Avatar';
-import { Icon } from '@/shared/ui/Icon';
-import EyeIcon from '@/shared/assets/icons/eye.svg';
-import DateIcon from '@/shared/assets/icons/date.svg';
-import { HStack, VStack } from '@/shared/ui/Stack';
-import { articleDetailsReducer } from '../../models/slice/ArticleSlice';
-import { fetchArticleById } from '../../models/services/fetchArticleById';
-import cls from './ArticleDetails.module.scss';
+
+import { ArticleBlockType } from '../../models/consts/ArticleConsts';
 import {
   getArticleDetailsData, getArticleDetailsError, getArticleDetailsIsLoading,
 } from '../../models/selectors/articleDetails';
+import { fetchArticleById } from '../../models/services/fetchArticleById';
+import { articleDetailsReducer } from '../../models/slice/ArticleSlice';
 import {
   ArticleBlock,
 } from '../../models/types/article';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
-import { ArticleBlockType } from '../../models/consts/ArticleConsts';
+
+import DateIcon from '@/shared/assets/icons/date.svg';
+import EyeIcon from '@/shared/assets/icons/eye.svg';
+import { classNames } from '@/shared/libs/classNames/classNames';
+import { DynamicModuleLoader, ReducersList } from '@/shared/libs/components/DynamicModuleLoader/DynamicModuleLoader';
+import { useAppDispatch } from '@/shared/libs/hooks/useAppDispatch/useAppDispatch';
+import { Avatar } from '@/shared/ui/Avatar';
+import { Icon } from '@/shared/ui/Icon';
+import { Skeleton } from '@/shared/ui/Skeleton';
+import { HStack, VStack } from '@/shared/ui/Stack';
+import { Text, TextAlign, TextSize } from '@/shared/ui/Text';
+
+import cls from './ArticleDetails.module.scss';
 
 interface ArticleDetailsProps {
   className?: string;

@@ -1,8 +1,10 @@
+import { ValidateProfileError } from '../../consts/editableProfileCardConsts';
+
+import { updateProfileData } from './updateProfileData';
+
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
 import { TestAsyncThunk } from '@/shared/libs/tests/testAsyncThunk/testAsyncThunk';
-import { updateProfileData } from './updateProfileData';
-import { ValidateProfileError } from '../../consts/editableProfileCardConsts';
 
 const data = {
   id: '1',

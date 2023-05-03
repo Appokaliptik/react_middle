@@ -1,9 +1,11 @@
 import {
-  type FC, useMemo, useState, useEffect, ReactNode,
+  useMemo, useState, useEffect, ReactNode,
 } from 'react';
+
 import {
   ThemeContext,
 } from '../../../../shared/libs/context/ThemeContext';
+
 import { Theme } from '@/shared/const/Theme';
 import { LOCAL_STORAGE_THEME_KEY } from '@/shared/const/localstorage';
 

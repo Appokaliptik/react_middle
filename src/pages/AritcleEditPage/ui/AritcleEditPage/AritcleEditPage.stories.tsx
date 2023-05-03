@@ -1,7 +1,9 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+
+import AritcleEditPage from './AritcleEditPage';
+
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import AritcleEditPage from './AritcleEditPage';
 import { Theme } from '@/shared/const/Theme';
 
 export default {

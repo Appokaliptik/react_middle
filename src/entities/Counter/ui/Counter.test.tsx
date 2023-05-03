@@ -1,6 +1,8 @@
 import { fireEvent, screen } from '@testing-library/react';
-import { renderComponent } from '@/shared/libs/tests/renderComponent/renderComponent';
+
 import { Counter } from './Counter';
+
+import { renderComponent } from '@/shared/libs/tests/renderComponent/renderComponent';
 
 describe('counter', () => {
   test('should be equal', () => {

@@ -1,5 +1,6 @@
-import { StateScheme } from '@/app/providers/StoreProvider';
 import { getArticleCommentsError, getArticleCommentsIsLoading } from './comments';
+
+import { StateScheme } from '@/app/providers/StoreProvider';
 
 describe('comments.test', () => {
   test('should return error', () => {

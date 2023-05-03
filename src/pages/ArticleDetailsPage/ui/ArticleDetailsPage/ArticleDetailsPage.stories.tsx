@@ -1,9 +1,11 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+
+import ArticleDetailsPage from './ArticleDetailsPage';
+
 import { Article, ArticleType, ArticleBlockType } from '@/entities/Articles';
+import { UserRole } from '@/entities/User';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { UserRole } from '@/entities/User';
-import ArticleDetailsPage from './ArticleDetailsPage';
 import { Theme } from '@/shared/const/Theme';
 
 export default {

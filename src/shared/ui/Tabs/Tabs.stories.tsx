@@ -1,8 +1,10 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+
+import { Tabs } from './Tabs';
+
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Tabs } from './Tabs';
 import { Theme } from '@/shared/const/Theme';
 
 export default {

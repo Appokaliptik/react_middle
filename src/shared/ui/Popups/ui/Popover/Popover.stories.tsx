@@ -1,9 +1,11 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+
+import { Popover } from './Popover';
+
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Button } from '@/shared/ui/Button';
-import { Popover } from './Popover';
 import { Theme } from '@/shared/const/Theme';
+import { Button } from '@/shared/ui/Button';
 
 export default {
   title: 'shared/Popover',

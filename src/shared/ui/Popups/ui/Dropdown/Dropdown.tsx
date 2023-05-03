@@ -1,12 +1,15 @@
 import { Menu } from '@headlessui/react';
 import { Fragment, ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
+
+import { AppLink } from '../../../AppLink/AppLink';
+import { mapDirectionClass } from '../../styles/consts';
+import style from '../../styles/popup.module.scss';
+
 import { classNames } from '@/shared/libs/classNames/classNames';
 import { DropdownDirection } from '@/shared/types/ui';
-import { AppLink } from '../../../AppLink/AppLink';
+
 import cls from './Dropdown.module.scss';
-import style from '../../styles/popup.module.scss';
-import { mapDirectionClass } from '../../styles/consts';
 
 export interface DropdownItem {
   disabled?: boolean;

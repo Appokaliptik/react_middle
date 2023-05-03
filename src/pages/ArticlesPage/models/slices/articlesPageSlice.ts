@@ -1,17 +1,18 @@
-import { action } from '@storybook/addon-actions';
 import {
   createEntityAdapter,
   createSlice,
   PayloadAction,
 } from '@reduxjs/toolkit';
+
+import { fetchArticlesList } from '../services/fetchArticlesList/fetchArticlesList';
+import { ArticlesPageScheme } from '../types/ArticlesPageScheme';
+
 import { StateScheme } from '@/app/providers/StoreProvider';
 import {
   Article, ArticleSortField, ArticleView, ArticleType,
 } from '@/entities/Articles';
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 import { SortOrder } from '@/shared/types/sortOrder';
-import { fetchArticlesList } from '../services/fetchArticlesList/fetchArticlesList';
-import { ArticlesPageScheme } from '../types/ArticlesPageScheme';
 
 const articlesAdapter = createEntityAdapter<Article>({
   // Assume IDs are stored in a field other than `book.id`

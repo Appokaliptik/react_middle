@@ -1,6 +1,9 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+
 import { ThemeDecorator } from '../../../config/storybook/ThemeDecorator/ThemeDecorator';
+
 import { ThemeSwitcher } from './ThemeSwitcher';
+
 import { Theme } from '@/shared/const/Theme';
 
 export default {

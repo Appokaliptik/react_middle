@@ -1,5 +1,6 @@
-import { StateScheme } from '@/app/providers/StoreProvider';
 import { getLoginState } from './getLoginState';
+
+import { StateScheme } from '@/app/providers/StoreProvider';
 
 describe('getLoginState test', () => {
   test('should return state', () => {

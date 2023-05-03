@@ -1,5 +1,6 @@
-import { StateScheme } from '@/app/providers/StoreProvider';
 import { getProfileReadonly } from './getProfileReadonly';
+
+import { StateScheme } from '@/app/providers/StoreProvider';
 
 describe('getProfileReadonly.test', () => {
   test('should return data', () => {

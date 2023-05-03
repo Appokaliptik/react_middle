@@ -1,13 +1,16 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
+
+import { ArticleView } from '../../models/consts/ArticleConsts';
+
 import ListIcon from '@/shared/assets/icons/list.svg';
 import TileIcon from '@/shared/assets/icons/tile.svg';
 import { classNames } from '@/shared/libs/classNames/classNames';
 import { Button, ButtonVariant } from '@/shared/ui/Button';
 import { Icon } from '@/shared/ui/Icon';
 import { HStack } from '@/shared/ui/Stack';
+
 import cls from './ArticleViewSelector.module.scss';
-import { ArticleView } from '../../models/consts/ArticleConsts';
 
 interface ArticleViewSelectorProps {
   className?: string;

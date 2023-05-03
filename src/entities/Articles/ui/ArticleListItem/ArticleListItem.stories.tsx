@@ -1,8 +1,10 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+
+import { ArticleListItem } from './ArticleListItem';
+
 import { Article, ArticleView } from '@/entities/Articles';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { ArticleListItem } from './ArticleListItem';
 import { Theme } from '@/shared/const/Theme';
 
 export default {

@@ -1,8 +1,9 @@
 import { classNames } from '@/shared/libs/classNames/classNames';
 import { Loader } from '@/shared/ui/Loader';
-import cls from './PageLoader.module.scss';
 // eslint-disable-next-line appo-fsd-plugin/layer-imports
 import { Page } from '@/widgets/Page';
+
+import cls from './PageLoader.module.scss';
 
 interface PageLoaderProps {
   className?: string;
