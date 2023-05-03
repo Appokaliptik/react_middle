@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
-import { Text, TextTheme } from '@/shared/ui/Text/Text';
+import { Text, TextTheme } from '@/shared/ui/Text';
 import { ProfileCard } from '@/entities/Profile';
 import { useAppDispatch } from '@/shared/libs/hooks/useAppDispatch/useAppDispatch';
 import { VStack } from '@/shared/ui/Stack';

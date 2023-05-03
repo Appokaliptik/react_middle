@@ -12,8 +12,8 @@ import {
 import { useAppDispatch } from '@/shared/libs/hooks/useAppDispatch/useAppDispatch';
 import { useDebounce } from '@/shared/libs/hooks/useDebounce/useDebounce';
 import { SortOrder } from '@/shared/types/sortOrder';
-import { Card } from '@/shared/ui/Card/Card';
-import { Input } from '@/shared/ui/Input/Input';
+import { Card } from '@/shared/ui/Card';
+import { Input } from '@/shared/ui/Input';
 import { HStack, VStack } from '@/shared/ui/Stack';
 import {
   getArticlesPageOrder, getArticlesPageSearch, getArticlesPageSort, getArticlesPageType, getArticlesPageView,

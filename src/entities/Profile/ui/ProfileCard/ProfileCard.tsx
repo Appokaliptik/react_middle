@@ -3,11 +3,11 @@ import { CountrySelect, Country } from '@/entities/Country';
 import { CurrencySelect, Currency } from '@/entities/Currency';
 import { Profile } from '@/entities/Profile';
 import { classNames, Mods } from '@/shared/libs/classNames/classNames';
-import { Avatar } from '@/shared/ui/Avatar/Avatar';
-import { Input } from '@/shared/ui/Input/Input';
-import { Loader } from '@/shared/ui/Loader/Loader';
+import { Avatar } from '@/shared/ui/Avatar';
+import { Input } from '@/shared/ui/Input';
+import { Loader } from '@/shared/ui/Loader';
 import { HStack, VStack } from '@/shared/ui/Stack';
-import { Text, TextAlign, TextTheme } from '@/shared/ui/Text/Text';
+import { Text, TextAlign, TextTheme } from '@/shared/ui/Text';
 import cls from './ProfileCard.module.scss';
 
 interface ProfileCardProps {

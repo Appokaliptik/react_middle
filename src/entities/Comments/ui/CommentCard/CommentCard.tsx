@@ -1,9 +1,9 @@
 import { memo } from 'react';
 import { classNames } from '@/shared/libs/classNames/classNames';
-import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
-import { Text } from '@/shared/ui/Text/Text';
-import { Avatar } from '@/shared/ui/Avatar/Avatar';
-import { AppLink } from '@/shared/ui/AppLink/AppLink';
+import { Skeleton } from '@/shared/ui/Skeleton';
+import { Text } from '@/shared/ui/Text';
+import { Avatar } from '@/shared/ui/Avatar';
+import { AppLink } from '@/shared/ui/AppLink';
 import { RoutePath } from '@/shared/config/AppRoutes/AppRoutes';
 import { VStack } from '@/shared/ui/Stack';
 import cls from './CommentCard.module.scss';
