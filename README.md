@@ -163,6 +163,9 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 ## Фичи (features)
 
 - addCommentForm
+- ArticleSortSelector
+- ArticleTypeTabs
+- ArticleViewSelector
 - articleRating
 - articleRecommendationsList
 - AuthByUsername

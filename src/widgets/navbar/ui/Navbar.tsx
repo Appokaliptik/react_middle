@@ -7,7 +7,7 @@ import { LoginModal } from '@/features/AuthByUsername';
 import { AvatarDropdown } from '@/features/AvatarDropdown';
 import { NotificationButton } from '@/features/notificationButton';
 import Logo from '@/shared/assets/icons/logo.svg';
-import { RoutePath } from '@/shared/config/AppRoutes/AppRoutes';
+import { getRouteArticleCreate, getRouteMain } from '@/shared/config/AppRoutes/AppRoutes';
 import { classNames } from '@/shared/libs/classNames/classNames';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
 import { Button, ButtonVariant } from '@/shared/ui/Button';
@@ -39,7 +39,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         <div className={cls.logoContainer}>
           <AppLink
             className={cls.logo}
-            to={RoutePath.main}
+            to={getRouteMain()}
           >
             <Icon Svg={Logo} />
             <Text text="SIMTU" theme={TextTheme.INVERTED} />
@@ -47,7 +47,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         </div>
         <AppLink
           className={cls.createBtn}
-          to={RoutePath.article_create}
+          to={getRouteArticleCreate()}
           theme={AppLinkTheme.SECONDARY}
         >
           {t('Create Article')}

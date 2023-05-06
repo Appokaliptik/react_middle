@@ -10,12 +10,12 @@ import { articlesPageActions } from '../../models/slices/articlesPageSlice';
 
 import {
   ArticleSortField,
-  ArticleSortSelector,
   ArticleType,
-  ArticleTypeTabs,
   ArticleView,
-  ArticleViewSelector,
 } from '@/entities/Articles';
+import { ArticleSortSelector } from '@/features/ArticleSortSelector';
+import { ArticleTypeTabs } from '@/features/ArticleTypeTabs';
+import { ArticleViewSelector } from '@/features/ArticleViewSelector';
 import { useAppDispatch } from '@/shared/libs/hooks/useAppDispatch/useAppDispatch';
 import { useDebounce } from '@/shared/libs/hooks/useDebounce/useDebounce';
 import { SortOrder } from '@/shared/types/sortOrder';

@@ -1,8 +1,7 @@
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { ArticleSortField } from '../../models/consts/ArticleConsts';
-
+import { ArticleSortField } from '@/entities/Articles';
 import { SortOrder } from '@/shared/types/sortOrder';
 import { Select, SelectOption } from '@/shared/ui/Select';
 import { HStack } from '@/shared/ui/Stack';
