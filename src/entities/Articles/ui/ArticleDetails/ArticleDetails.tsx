@@ -20,7 +20,7 @@ import EyeIcon from '@/shared/assets/icons/eye.svg';
 import { classNames } from '@/shared/libs/classNames/classNames';
 import { DynamicModuleLoader, ReducersList } from '@/shared/libs/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/libs/hooks/useAppDispatch/useAppDispatch';
-import { Avatar } from '@/shared/ui/Avatar';
+import { AppImage } from '@/shared/ui/AppImage';
 import { Icon } from '@/shared/ui/Icon';
 import { Skeleton } from '@/shared/ui/Skeleton';
 import { HStack, VStack } from '@/shared/ui/Stack';
@@ -86,7 +86,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     content = (
       <VStack gap="16" max>
         <HStack max justify="center">
-          <Skeleton width={200} height={200} border="50%" />
+          <Skeleton width="100%" height={200} />
         </HStack>
         <Skeleton className={cls.title} width={300} height={32} />
         <Skeleton width={600} height={24} />
@@ -107,8 +107,10 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     content = (
       <>
         <HStack max justify="center">
-          <Avatar
-            size={200}
+          <AppImage
+            className={cls.image}
+            width="100%"
+            height={200}
             src={article?.img}
           />
         </HStack>
