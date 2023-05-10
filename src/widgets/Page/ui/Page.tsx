@@ -11,7 +11,7 @@ import { useAppDispatch } from '@/shared/libs/hooks/useAppDispatch/useAppDispatc
 import { useInfiniteScroll } from '@/shared/libs/hooks/useInfiniteScroll/useInfiniteScroll';
 import { useInitialEffect } from '@/shared/libs/hooks/useInitialEffect/useInitialEffect';
 import { useThrottle } from '@/shared/libs/hooks/useThrottle/useThrottle';
-import { TestProps } from '@/shared/types/test';
+import { TestProps } from '@/shared/types/ui';
 
 import cls from './Page.module.scss';
 
