@@ -19,7 +19,10 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     return <Text text={t('profile not found')} />;
   }
   return (
-    <Page className={classNames('', {}, [className])}>
+    <Page
+      className={classNames('', {}, [className])}
+      data-testid="ProfilePage"
+    >
       <VStack gap="16">
         <EditableProfileCard id={id} />
       </VStack>
